@@ -1,0 +1,409 @@
+
+.web-design {
+    position: relative;
+  }
+nav.navbar.navbar-expand-sm.navbar-dark{
+    top:0;
+    position: sticky;
+    z-index: 1000;
+}		
+.navbar{
+    position:sticky;
+   
+}
+ul.navbar-nav.me-auto.mb-2.mb-lg-0 {
+margin-left: auto;
+}
+
+#navbarSupportedContent ul {
+margin-left: 0;
+margin-right: 0;
+position: relative;
+right: 0;
+
+}
+.navbar-brand{
+    color: #fff;
+}
+.nav-link{
+    color: #fff;
+}
+.btn{
+    color: #fff;
+}
+.navbar-nav .nav-link{
+  
+  
+    transition: .5s;
+}
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active-hover {
+    background: linear-gradient(109deg, rgba(255, 134, 96, 0.81) 24.35%, rgba(154, 51, 255, 0.81) 80.15%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: background 0.5s; /* Smooth transition effect */
+}
+
+.logo-search-grid-1x-1-icon {
+    width: 86px;
+    position: relative;
+    height: 40px;
+    object-fit: cover;
+}
+
+.navbar {
+    align-self: stretch;
+    box-shadow: 0px 4.363636016845703px 16px -2.18px rgba(0, 0, 0, 0.1);
+    background-color: #1f1f1f;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: var(--padding-12xs) 91px var(--padding-12xs) 74px;
+    position: sticky;
+    text-align: center;
+    font-family: var(--font-plus-jakarta-sans);
+    
+}
+.avatar-background {
+    position: absolute;
+    height: 95.52%;
+    width: 84.86%;
+    top: 4.04%;
+    right: 11.55%;
+    bottom: 0.45%;
+    left: 3.59%;
+    border-radius: 50%;
+    background: linear-gradient(137.59deg, #ff8660, #8000ff 98.96%);
+}
+.avatar-icon {
+    position: absolute;
+    height: 95.52%;
+    width: 84.86%;
+    top: 4.04%;
+    right: 11.55%;
+    bottom: 0.45%;
+    left: 3.59%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+}
+.avatar {
+    width: 251px;
+    position: relative;
+    height: 223px;
+}
+.title {
+    align-self: stretch;
+    position: relative;
+    line-height: 63.36px;
+    background: linear-gradient(109.35deg, rgba(255, 134, 96, 0.81), rgba(154, 51, 255, 0.81));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.span {
+    color: var(--primary-color);
+}
+.im-tushar-kumar1 {
+    background: linear-gradient(109.35deg, rgba(255, 134, 96, 0.81), rgba(154, 51, 255, 0.81));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.im-tushar-kumar {
+    margin: 0;
+}
+.a-software {
+    margin: 0;
+    background: linear-gradient(109.35deg, rgba(255, 134, 96, 0.81), rgba(154, 51, 255, 0.81));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.title1 {
+    align-self: stretch;
+    position: relative;
+    font-size: var(--font-size-41xl);
+    line-height: 63.36px;
+}
+.about-me {
+    align-self: stretch;
+    position: relative;
+    letter-spacing: 0.02em;
+    font-weight: 300;
+}
+.hero {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0px var(--padding-61xl);
+    gap: 43px;
+    font-size: var(--font-size-11xl);
+    color: var(--secondary-text);
+    font-family: var(--font-kumbh-sans);
+}
+.get-in-touch-button-child {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    left: 0%;
+    border-radius: var(--br-31xl);
+    background: linear-gradient(#fff, #fff), #fff;
+    border: 1px solid var(--primary-color);
+    box-sizing: border-box;
+}
+.get-in-touch {
+    position: absolute;
+    top: 25%;
+    left: 15.38%;
+    font-weight: 600;
+    text-shadow: 0.3px 0 0 #fff, 0 0.3px 0 #fff, -0.3px 0 0 #fff, 0 -0.3px 0 #fff;
+}
+.get-in-touch-button {
+    width: 195px;
+    position: relative;
+    height: 64px;
+}
+.download-cv-button-child {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    left: 0%;
+    border-radius: var(--br-31xl);
+    border: 2px solid var(--primary-color);
+    box-sizing: border-box;
+}
+.download-cv {
+    position: absolute;
+    top: 25%;
+    left: 13.73%;
+    font-weight: 600;
+    text-shadow: 0.3px 0 0 #ff8660, 0 0.3px 0 #ff8660, -0.3px 0 0 #ff8660, 0 -0.3px 0 #ff8660;
+}
+.download-cv-button {
+    width: 204px;
+    position: relative;
+    height: 64px;
+    color: var(--primary-color);
+}
+.action-buttons {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    gap: 18px;
+    font-size: 21.38px;
+    color: var(--web-design);
+}
+.experience-with {
+    width: 208px;
+    position: relative;
+    font-size: var(--font-size-xl);
+    letter-spacing: 0.12em;
+    font-weight: 600;
+    background: linear-gradient(126.89deg, #ff8660, #9a33ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    height: 30px;
+    flex-shrink: 0;
+}
+.javascript-icon {
+    width: 42px;
+    position: relative;
+    height: 42px;
+}
+.html-icon {
+    width: 37px;
+    position: relative;
+    height: 42px;
+}
+.reactjs-icon {
+    width: 47px;
+    position: relative;
+    height: 42px;
+}
+.logos {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    gap: 60.4px;
+}
+.project-title {
+    width: 182px;
+    position: relative;
+    font-size: 35px;
+    line-height: 35.75px;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-family: var(--font-kumbh-sans);
+    background: linear-gradient(180deg, #ff8660, #d5491d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    height: 30px;
+    flex-shrink: 0;
+}
+
+.i-bring-ideas {
+    width: 836px;
+    position: relative;
+    letter-spacing: 0.01em;
+    display: flex;
+    font-family: var(--font-syne);
+    background: linear-gradient(91.79deg, #ff8660, #9a33ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    align-items: center;
+   
+    opacity: 0.6;
+}
+.my-journey-began {
+    margin: 0;
+    #fff-space: pre-wrap;
+}
+.im-tushar-kumar-container1 {
+    width: 100%;
+}
+.im-tushar-kumar-container {
+    width: 980px;
+    position: relative;
+    font-size: 24px;
+    letter-spacing: 0.01em;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.frontend-tools {
+    font-family: var(--font-kumbh-sans);
+    background: linear-gradient(126.89deg, #ff8660, #9a33ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.span1 {
+    #fff-space: normal;
+}
+.p {
+  
+    color: var(--primary-color);
+}
+.design-tools2 {
+    background: linear-gradient(126.89deg, #ff8660, #9a33ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.frontend-tools-html5-css3-container {
+    width: 182px;
+    position: relative;
+    font-size: var(--font-size-xl);
+    letter-spacing: 0.01em;
+    display: flex;
+    align-items: center;
+    height: 468px;
+    flex-shrink: 0;
+}
+.about-me1 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-content: center;
+    padding: 0px var(--padding-61xl);
+    gap: 37px 40px;
+    font-size: var(--font-size-41xl);
+    color: var(--secondary-text);
+    font-family: var(--font-kumbh-sans);
+}
+.contact-title {
+    width: 136.2px;
+    position: relative;
+    letter-spacing: 0.02em;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+.contact-subtitle {
+    width: 296.9px;
+    position: relative;
+    font-size: 14.12px;
+    letter-spacing: 0.02em;
+    font-weight: 600;
+    color: var(--secondary-text);
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+.instagram-icon {
+    width: 18px;
+    position: relative;
+    height: 18px;
+}
+.x-icon {
+    width: 17px;
+    position: relative;
+    height: 16px;
+}
+.youtube-icon {
+    width: 20px;
+    position: relative;
+    height: 15px;
+}
+.email-icon {
+    width: 16.4px;
+    position: relative;
+    height: 16.5px;
+    overflow: hidden;
+    flex-shrink: 0;
+    object-fit: contain;
+}
+.contact-icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 27px;
+}
+.footer {
+    align-self: stretch;
+    background-color: #191919;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    padding: var(--padding-64xl) 238px var(--padding-64xl) 54px;
+    gap: 14px 27px;
+    font-size: 23.53px;
+}
+.web-design {
+    width: 100%;
+    position: relative;
+    background-color: var(--web-design);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 82px;
+    text-align: left;
+    font-size: var(--font-size-mini);
+    color: var(--primary-color);
+    font-family: var(--font-poppins);
+}
