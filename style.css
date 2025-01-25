@@ -385,7 +385,7 @@ right: 0;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
     align-content: center;
     padding: var(--padding-64xl) 238px var(--padding-64xl) 54px;
