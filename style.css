@@ -395,15 +395,15 @@ right: 0;
     position: relative;
     height: 18px;
 }
-.x-icon {
-    width: 17px;
+.facebook-icon {
+    width: 22px;
     position: relative;
-    height: 16px;
+    height: 20px;
 }
-.youtube-icon {
-    width: 20px;
+.github-icon {
+    width: 22px;
     position: relative;
-    height: 15px;
+    height: 20px;
 }
 .email-icon {
     width: 16.4px;
@@ -418,7 +418,7 @@ right: 0;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    gap: 27px;
+    gap: 20px;
 }
 .footer {
     align-self: stretch;
@@ -430,7 +430,7 @@ right: 0;
     flex-wrap: wrap;
     align-content: center;
     padding: var(--padding-64xl) 238px var(--padding-64xl) 54px;
-    gap: 14px 27px;
+    gap: 17px ;
     font-size: 23.53px;
 }
 .web-design {
