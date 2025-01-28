@@ -5,8 +5,8 @@
   	<meta name="viewport" content="initial-scale=1, width=device-width">
   	
   	
-  	<link rel="stylesheet" href="./global.css" />
-  	<link rel="stylesheet"  href="./style.css" />
+  
+  	<link rel="stylesheet"  href="style.css" />
   	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus Jakarta Sans:wght@600&display=swap" />
   	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kumbh Sans:wght@300;400;700;800&display=swap" />
   	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&display=swap" />
@@ -187,13 +187,13 @@
       			<b class="contact-title" id="contact">Contact</b>
       			<div class="contact-subtitle">Mr_Tushar_Kumar@proton.me</div>
       			<div class="contact-icons">
-        				<img class="instagram-icon" alt="" src="./assists/instagram.svg">
+        				<img id="clickableIcon" class="instagram-icon" alt="" src="./assists/instagram.svg">
         				
-        				<img class="x-icon" alt="" src="./assists/x.png">
+        				<img id="clickableIcon-2" class="facebook-icon"  alt="" src="./assists/facebook.svg">
         				
-        				<img class="youtube-icon" alt="" src="./assists/youtube.png">
+        				<img id="clickableIcon-3" class="github-icon" alt="" src="./assists/github.svg">
         				
-        				<img class="email-icon" alt="" src="./assists/Email Icon.svg">
+        				<img id="clickableIcon-1" class="email-icon" alt="" src="./assists/Email Icon.svg">
         				
       			</div>
     		</div>
@@ -220,6 +220,21 @@ window.onscroll = () => {
         }
     });
 };
+
+// Insta Link 
+document.getElementById('clickableIcon').onclick = function() {
+    window.location.href = 'https://www.instagram.com/rk_engineer_s/';
+};
+document.getElementById('clickableIcon-1').onclick = function() {
+    window.location.href = 'mailto:Mr_Tushar_Kumar@proton.me';
+};
+document.getElementById('clickableIcon-2').onclick = function() {
+    window.location.href = 'https://www.facebook.com/profile.php?id=61567836661163';
+};
+document.getElementById('clickableIcon-3').onclick = function() {
+    window.location.href = 'https://github.com/MrTusharkumar';
+};
+
 	</script>
 
 </body>
