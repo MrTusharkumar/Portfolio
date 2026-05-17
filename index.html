@@ -1,242 +1,2340 @@
 <!DOCTYPE html>
-<html>
+<html class="dark" lang="en">
+
 <head>
-  	<meta charset="utf-8">
-  	<meta name="viewport" content="initial-scale=1, width=device-width">
-  	
-  	
-  
-  	<link rel="stylesheet"  href="style.css" />
-  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus Jakarta Sans:wght@600&display=swap" />
-  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kumbh Sans:wght@300;400;700;800&display=swap" />
-  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&display=swap" />
-  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap" />
-  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@700&display=swap" />
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-	 
-  	
-  	
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Lumina Digital - Showcase</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        /* --- Amber/Gold Brand --- */
+                        "primary": "#ffc107",
+                        "on-primary": "#121414",
+                        /* --- Surfaces --- */
+                        "background": "#121414",
+                        "surface": "#1a1c1c",
+                        "surface-container": "#1e2020",
+                        "surface-container-low": "#181a1a",
+                        "surface-container-high": "#252828",
+                        "surface-container-highest": "#2e3232",
+                        "surface-dim": "#0f1010",
+                        "surface-bright": "#2a2d2d",
+                        "surface-variant": "#2d3232",
+                        "surface-tint": "#ffc107",
+                        /* --- Text --- */
+                        "on-surface": "#f8fafc",
+                        "on-surface-variant": "#94a3b8",
+                        "on-background": "#f8fafc",
+                        /* --- Accent containers (reuse amber tones) --- */
+                        "primary-container": "#4f3a00",
+                        "on-primary-container": "#ffc107",
+                        "secondary": "#ffd54f",
+                        "secondary-container": "#3d2e00",
+                        "on-secondary": "#121414",
+                        "on-secondary-container": "#ffd54f",
+                        "tertiary": "#ffb300",
+                        "tertiary-container": "#4a3600",
+                        "on-tertiary": "#121414",
+                        "on-tertiary-container": "#ffb300",
+                        /* --- Utility --- */
+                        "outline": "#4f4632",
+                        "outline-variant": "#3a3220",
+                        "inverse-surface": "#f8fafc",
+                        "inverse-on-surface": "#121414",
+                        "inverse-primary": "#b38600",
+                        "error": "#f87171",
+                        "error-container": "#7f1d1d",
+                        "on-error": "#121414",
+                        "on-error-container": "#fca5a5",
+                        "surface-container-lowest": "#0b0d0d"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "premium": "1.5rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "xs": "0.25rem",
+                        "gutter": "1.5rem",
+                        "lg": "1.5rem",
+                        "sm": "0.5rem",
+                        "xl": "2.5rem",
+                        "margin": "2rem",
+                        "md": "1rem",
+                        "xxl": "5rem"
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Space Grotesk", "sans-serif"],
+                        "h1": ["Plus Jakarta Sans", "sans-serif"],
+                        "h2": ["Plus Jakarta Sans", "sans-serif"],
+                        "h3": ["Inter", "sans-serif"],
+                        "label-sm": ["Space Grotesk", "sans-serif"],
+                        "label-md": ["Space Grotesk", "sans-serif"],
+                        "body-lg": ["Inter", "sans-serif"],
+                        "body-md": ["Inter", "sans-serif"]
+                    },
+                    fontSize: {
+                        "h3": ["24px", { "lineHeight": "1.4", "letterSpacing": "0em", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "h1": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "h2": ["30px", { "lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "1.0", "letterSpacing": "0.02em", "fontWeight": "500" }],
+                        "display": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": "400" }]
+                    },
+                    animation: {
+                        "float": "float 6s ease-in-out infinite"
+                    },
+                    keyframes: {
+                        float: {
+                            "0%, 100%": { transform: "translateY(0)" },
+                            "50%": { transform: "translateY(-20px)" }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        .font-display {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .glass-edge {
+            box-shadow: inset 1px 1px 0px 0px rgba(255, 255, 255, 0.08);
+        }
+
+        .glow-shadow {
+            box-shadow: 0 0 40px -10px rgba(255, 193, 7, 0.15), 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+        }
+
+        .glow-shadow:hover {
+            box-shadow: 0 0 60px -10px rgba(255, 193, 7, 0.35), 0 10px 15px -3px rgba(0, 0, 0, 0.6);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #fff 0%, #ffc107 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .text-glow {
+            text-shadow: 0 0 40px rgba(255, 193, 7, 0.3);
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Reveal scroll animations */
+        .reveal {
+            opacity: 0;
+            transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+            will-change: transform, opacity;
+        }
+
+        .reveal-up {
+            transform: translateY(40px);
+        }
+
+        .reveal-down {
+            transform: translateY(-40px);
+        }
+
+        .reveal-left {
+            transform: translateX(-40px);
+        }
+
+        .reveal-right {
+            transform: translateX(40px);
+        }
+
+        .reveal-scale {
+            transform: scale(0.9);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translate(0, 0) scale(1);
+        }
+
+        .delay-200 {
+            transition-delay: 200ms;
+        }
+
+        .delay-300 {
+            transition-delay: 300ms;
+        }
+
+        .delay-400 {
+            transition-delay: 400ms;
+        }
+
+        .delay-500 {
+            transition-delay: 500ms;
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #fff 0%, #ffc107 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .container-max {
+            max-width: 1400px;
+        }
+
+        .px-margin-x {
+            padding-left: clamp(1.5rem, 6vw, 6rem);
+            padding-right: clamp(1.5rem, 6vw, 6rem);
+        }
+
+        /* SPA view switching */
+        .spa-view {
+            display: none;
+        }
+
+        .spa-view.active {
+            display: block;
+        }
+
+        /* Gallery inner views */
+        .page-view {
+            transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+        }
+
+        .page-view.hidden {
+            display: none;
+            opacity: 0;
+            transform: translateY(10px);
+        }
+
+        #preview-container {
+            transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            flex: none !important;
+        }
+
+        /* ── Android Mobile UX ──────────────────────── */
+        /* Prevent horizontal overflow and auto-zoom issues */
+        html,
+        body {
+            overflow-x: hidden;
+            width: 100%;
+            position: relative;
+            margin: 0;
+            padding: 0;
+            -webkit-text-size-adjust: 100%;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* Android Bottom Navigation Bar */
+        #bottom-nav {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 9999;
+            background: rgba(18, 20, 20, 0.95);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            border-top: 1px solid rgba(255, 193, 7, 0.2);
+            padding-bottom: env(safe-area-inset-bottom);
+            box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.6);
+        }
+
+        .bottom-nav-inner {
+            display: flex;
+            align-items: stretch;
+            height: 64px;
+        }
+
+        .bnav-item {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+            border: none;
+            background: none;
+            color: #94a3b8;
+            transition: color 0.25s ease;
+            min-height: 48px;
+            padding: 8px 0;
+        }
+
+        .bnav-item.active-tab {
+            color: #ffc107;
+        }
+
+        .bnav-item .bnav-icon {
+            font-size: 22px;
+            line-height: 1;
+            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .bnav-item.active-tab .bnav-icon {
+            transform: translateY(-2px) scale(1.15);
+        }
+
+        .bnav-item .bnav-label {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            font-family: 'Space Grotesk', sans-serif;
+            transition: opacity 0.25s;
+        }
+
+        /* Active indicator pill */
+        .bnav-item::before {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 50%;
+            transform: translateX(-50%) scaleX(0);
+            width: 48px;
+            height: 32px;
+            background: rgba(255, 193, 7, 0.12);
+            border-radius: 16px;
+            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .bnav-item.active-tab::before {
+            transform: translateX(-50%) scaleX(1);
+        }
+
+        /* Ripple effect */
+        .ripple {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 193, 7, 0.25);
+            transform: scale(0);
+            animation: ripple-anim 0.5s linear;
+            pointer-events: none;
+        }
+
+        @keyframes ripple-anim {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+
+        /* Filter transitions */
+        .template-card {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .template-card.filtered-out {
+            opacity: 0;
+            transform: scale(0.9);
+            pointer-events: none;
+            position: absolute;
+            visibility: hidden;
+        }
+
+        /* Show bottom nav only on mobile */
+        @media (max-width: 767px) {
+            #bottom-nav {
+                display: block;
+            }
+
+            /* Add bottom padding so content isn't hidden behind bottom nav */
+            #view-gallery,
+            #view-about,
+            #view-services {
+                padding-bottom: calc(80px + env(safe-area-inset-bottom)) !important;
+            }
+
+            /* Hide top nav links on mobile — bottom nav handles it */
+            .mobile-hide-nav {
+                display: none !important;
+            }
+
+            /* Global Typography Reduction for Mobile */
+            html {
+                font-size: 14px;
+            }
+
+            h1,
+            .text-6xl,
+            .text-7xl,
+            .text-8xl,
+            .text-9xl {
+                font-size: 2.4rem !important;
+                line-height: 1.1 !important;
+                letter-spacing: -0.03em !important;
+            }
+
+            h2,
+            .text-5xl {
+                font-size: 1.8rem !important;
+                line-height: 1.2 !important;
+            }
+
+            h3,
+            .text-4xl {
+                font-size: 1.4rem !important;
+            }
+
+            .font-body-lg,
+            .text-xl {
+                font-size: 1rem !important;
+            }
+
+            .font-body-md,
+            .text-lg {
+                font-size: 0.95rem !important;
+            }
+
+            /* Mobile hero: stack vertically */
+            .about-hero-main {
+                flex-direction: column !important;
+                padding-top: 5rem !important;
+                padding-bottom: 3rem !important;
+                min-height: auto !important;
+                gap: 1.5rem;
+                align-items: flex-start !important;
+            }
+
+            .about-hero-name {
+                width: 100% !important;
+            }
+
+            .about-hero-name h1 {
+                font-size: 2.8rem !important;
+                line-height: 1.05 !important;
+            }
+
+            .about-hero-img {
+                width: 100% !important;
+                height: 280px !important;
+                margin-left: 0 !important;
+            }
+
+            .about-hero-intro {
+                width: 100% !important;
+                padding-bottom: 2rem !important;
+            }
+
+            .about-hero-intro h2 {
+                font-size: 1.5rem !important;
+            }
+
+            /* Gallery & Cards */
+            .gallery-grid {
+                grid-template-columns: 1fr !important;
+                gap: 1.5rem !important;
+            }
+
+            .template-card .p-lg {
+                padding: 1.25rem !important;
+            }
+
+            /* Mobile section padding */
+            .mobile-py {
+                padding-top: 3.5rem !important;
+                padding-bottom: 3.5rem !important;
+            }
+
+            /* Service cards */
+            .service-grid {
+                grid-template-columns: 1fr !important;
+                gap: 1rem !important;
+            }
+
+            .service-card {
+                min-height: auto !important;
+                padding: 1.5rem !important;
+            }
+
+            .service-card h4 {
+                font-size: 1.6rem !important;
+            }
+
+            /* Stats */
+            .stats-row {
+                flex-direction: row !important;
+                gap: 1.5rem !important;
+                flex-wrap: wrap;
+            }
+
+            .stat-number {
+                font-size: 2.2rem !important;
+            }
+
+            /* Footer */
+            .about-footer-inner {
+                flex-direction: column !important;
+                align-items: center !important;
+                text-align: center !important;
+                gap: 1rem !important;
+            }
+        }
+
+        /* Ultra-Small Devices (iPhone SE, small Androids) */
+        @media (max-width: 350px) {
+            html {
+                font-size: 12px;
+            }
+
+            .px-6 {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+
+            .p-8,
+            .p-10,
+            .p-14 {
+                padding: 1.25rem !important;
+            }
+
+            .gap-8 {
+                gap: 1rem !important;
+            }
+
+            h1,
+            .text-6xl,
+            .text-7xl,
+            .text-8xl,
+            .text-9xl {
+                font-size: 1.8rem !important;
+            }
+
+            .about-hero-name h1 {
+                font-size: 2.2rem !important;
+            }
+
+            .w-20.h-20 {
+                width: 3.5rem !important;
+                height: 3.5rem !important;
+            }
+
+            .material-symbols-outlined.text-4xl {
+                font-size: 2rem !important;
+            }
+
+            .stat-number {
+                font-size: 1.8rem !important;
+            }
+
+            .bnav-label {
+                font-size: 10px !important;
+            }
+
+            /* Preview Explorer Compact */
+            .preview-nav-label {
+                display: none !important;
+            }
+
+            #preview-view header {
+                height: 60px !important;
+                padding-left: 0.75rem !important;
+                padding-right: 0.75rem !important;
+            }
+
+            .device-toggle {
+                min-width: 36px !important;
+                p-1 !important;
+            }
+
+            .device-toggle span {
+                font-size: 18px !important;
+            }
+        }
+
+        /* Touch ripple on gallery cards */
+        .template-card {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* Smooth view transitions on mobile */
+        @media (max-width: 767px) {
+            .spa-view {
+                animation: none;
+            }
+
+            .spa-view.active {
+                animation: fadeIn 0.3s ease;
+            }
+
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(8px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: none;
+                }
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 </head>
-<body>
-  	<!-- Header Section  -->
-  	<div class="web-design">
-		<!--Navbar-start -->
 
-		<nav class="navbar  navbar-expand-sm sticky-top navbar-dark " style="position: sticky;" >
-			<div class="container-fluid">
-			  <img id="home" class="navbar-brand" src="./assists/logo-search-grid-1x 1.png">
-			  <button class="navbar-toggler"  type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon "  ></span>
-			  </button>
-			  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-				  <li class="nav-item">
-					<a class="nav-link active   " aria-current="page" href="#home">Home</a>
-				  </li>
-				  <li class="nav-item">
-					<a class="nav-link active  " aria-current="page" href="#project">Project</a>
-				  </li>
-				  <li class="nav-item">
-					<a class="nav-link active  " aria-current="page" href="#about">About</a>
-				  </li>
-				
-				  <li class="nav-item">
-					<a class="nav-link active  " aria-current="page" href="#contact">Contact Me</a>
-				  </li>
-				</ul>
-			   
-			  </div>
-			</div>
-		  </nav>
-		
-		<!--Navbar End -->
-		
-    		<div class="hero" >
-      			<div class="avatar">
-        				<div class="avatar-background">
-        				</div>
-        				<img class="avatar-icon" alt="" src="./assists/Avatar.png">
-        				
-      			</div>
-      			<div class="title">Hey, there</div>
-      			<b class="title1">
-        				<p class="im-tushar-kumar">
-          					<span class="span"> </span>
-          					<span class="im-tushar-kumar1">I'm Tushar Kumar</span>
-        				</p>
-        				<p class="a-software"> a Software </p>
-        				<p class="a-software"> Engineer </p>
-      			</b>
-      			<div class="about-me">I specialize in creating responsive, user-friendly, and high-performing web solutions tailored to meet your business needs.</div>
-    		</div>
-    		<div class="action-buttons">
-      			<div class="get-in-touch-button">
-        				<div class="get-in-touch-button-child">
-        				</div>
-        				<div class="get-in-touch"><a href="mailto:Mr_Tushar_Kumar@proton.me" style=" color:#161513 ; text-decoration: none; " >Get In Touch</a></div>
-      			</div>
-      			<div class="download-cv-button">
-        				<div class="download-cv-button-child">
-        				</div>
-        				<div class="download-cv"><a href="./assists/Tushar Wadhwani.pdf" download style=" color:white; text-decoration: none; ">Download Resume </a></div>
-      			</div>
-    		</div>
-    		<div class="experience-with">EXPERIENCE WITH</div>
-    		<div class="logos">
-      			<img class="javascript-icon" alt="" src="./assists/javascript.png">
-      			
-      			<img class="javascript-icon" alt="" src="./assists/nodejs.png">
-      			
-      			<img class="html-icon" alt="" src="./assists/html.png">
-      			
-      			<img class="html-icon" alt="" src="./assists/css.png">
-      			
-      			<img class="reactjs-icon" alt="" src="./assists/reactjs.png">
-      			
-    		</div>
-    		<div class="project-title" id="project">Projects</div>
-			<!-- Projects -->
-			<div style="width: 100%; position: relative; display: flex; flex-direction: row; align-items: center; justify-content: center; flex-wrap: wrap; align-content: center; gap: 56px; text-align: left; font-size: 19px; color: #fff; font-family: Poppins;">
-				<a style="color: #fff;" href="https://mrtusharkumar.github.io/Notion-Landing-Page/">
-				<div style="width: 390px; position: relative; height: 301px;">
-				<div style="position: absolute; height: 100%; width: 100%; top: 0%; right: 0%; bottom: 0%; left: 0%; border-radius: 18px; background-color: #fff;">
-				</div>
-				<div style="position: absolute; height: 22.59%; width: 100%; top: 77.41%; right: 0%; bottom: 0%; left: 0%; background-color: #2a2a2a;">
-				</div>
-				<img style="position: absolute; height: 77.41%; width: 90.77%; top: 0%; right: 4.62%; bottom: 22.59%; left: 4.62%; max-width: 100%; overflow: hidden; max-height: 100%; object-fit: cover;" alt="" src="./assists/Hug Mode 1.png">
-				<div style="position: absolute; height: 13.29%; width: 40.21%; top: 82.06%; right: 53.9%; bottom: 4.65%; left: 5.9%;">
-				<div style="position: absolute; width: 100%; top: 50%; left: 0%; line-height: 20px; text-transform: uppercase; font-weight: 800; display: inline-block;">Demo preview</div>
-				<div style="position: absolute; width: 67.35%; top: 0%; left: 0%; font-size: 10px; line-height: 19px; text-transform: uppercase; font-weight: 800; color: #c5c5c5; display: inline-block;">CLICK HERE TO VISIT</div>
-				</div>
-				<img style="position: absolute; height: 6.71%; width: 5.41%; top: 85.38%; right: 5.05%; bottom: 7.91%; left: 89.54%; max-width: 100%; overflow: hidden; max-height: 100%; object-fit: contain;" alt="" src="./assists/View Icon.svg ">
-				</div></a>
-			  <a style="color: #fff;" href="https://mrtusharkumar.github.io/Drones-Landing-page/">
-				 <div  style="width: 390px; position: relative; height: 301px;">
-				<div style="position: absolute; height: 100%; width: 100%; top: 0%; right: 0%; bottom: 0%; left: 0%; border-radius: 18px; background-color: #d9d9d9;">
-				</div>
-				<div style="position: absolute; height: 22.59%; width: 100%; top: 77.41%; right: 0%; bottom: 0%; left: 0%; background-color: #2a2a2a;">
-				</div>
-				<img style="position: absolute; height: 77.41%; width: 90.77%; top: 0%; right: 4.62%; bottom: 22.59%; left: 4.62%; border-radius: 16px; max-width: 100%; overflow: hidden; max-height: 100%; object-fit: cover;" alt="" src="./assists/Hug Mode 2.png">
-				<div style="position: absolute; height: 13.29%; width: 40.21%; top: 82.06%; right: 53.9%; bottom: 4.65%; left: 5.9%;">
-				<div style="position: absolute; width: 100%; top: 50%; left: 0%; line-height: 20px; text-transform: uppercase; font-weight: 800; display: inline-block;">Demo preview</div>
-				<div style="position: absolute; width: 67.35%; top: 0%; left: 0%; font-size: 10px; line-height: 19px; text-transform: uppercase; font-weight: 800; color: #c5c5c5; display: inline-block;">CLICK HERE TO VISIT</div>
-				</div>
-				<img style="position: absolute; height: 6.71%; width: 5.41%; top: 85.38%; right: 5.05%; bottom: 7.91%; left: 89.54%; max-width: 100%; overflow: hidden; max-height: 100%; object-fit: contain;" alt="" src="./assists/View Icon.svg ">
-				</div> </a>
-				</div>
-				
+<body class="bg-background text-on-surface font-body-md min-h-screen antialiased">
 
+    <!-- SPA Root -->
+    <div id="view-gallery" class="spa-view active">
 
-			<!-- End -->
-    		<div class="about-me1" id="about">
-      			<b class="i-bring-ideas">I BRING IDEAS TO LIFE THROUGH THE WEB</b>
-      			<div class="im-tushar-kumar-container">
-        				<span class="im-tushar-kumar-container1">
-          					<p class="im-tushar-kumar">I’m Tushar Kumar, a passionate web developer with over 3 years of experience, dedicated to creating smart, modern, and impactful web solutions. From building Netflix-like landing pages to crafting user-centric websites inspired by platforms like Notion, I turn ideas into compelling digital experiences that help businesses thrive.</p>
-          					<p class="im-tushar-kumar">&nbsp;</p>
-          					<p class="my-journey-began">My journey began in 2023, and since then, I’ve consistently honed my development skills, diving deeper into Web Development and UI/UX design to deliver projects that balance functionality with aesthetics. I love solving complex challenges, continuously learning, and refining my craft to ens ure that every solution is tailored to your needs and goals.     </p>
-          					<p class="im-tushar-kumar">&nbsp;</p>
-          					<p class="im-tushar-kumar">Each project is an opportunity to transform your vision into reality—whether that’s through designing responsive websites, automating workflows, or improving user engagement. My aim? To deliver solutions that businesses are proud to showcase.</p>
-        				</span>
-      			</div>
-      			<div class="frontend-tools-html5-css3-container">
-        				<span class="im-tushar-kumar-container1">
-          					<p class="im-tushar-kumar">
-            						<b class="frontend-tools">Frontend Tools</b>
-            						<span>
-              							<span class="span">&nbsp;</span>
-              							<span>HTML5, CSS3, JavaScript (ES6+),</span>
-            						</span>
-          					</p>
-          					<p class="im-tushar-kumar">
-            						<span>
-              							<span>React.js, Next.js, Tailwind CSS, Bootstrap, Material UI, Git/GitHub</span>
-            						</span>
-          					</p>
-          					<p class="p">
-            						<span>
-              							<span class="span1">              </span>
-            						</span>
-          					</p>
-          					<p class="im-tushar-kumar">
-            						<b class="frontend-tools">Backend Tools</b>
-            						<span>
-              							<span class="span">&nbsp;</span>
-              							<span>PHP Laravel, Node.js, Express.jsMySQL, MongoDB</span>
-            						</span>
-          					</p>
-          					<p class="p">
-            						<b class="span1">
-              							<span>&nbsp;</span>
-            						</b>
-          					</p>
-          					<p class="im-tushar-kumar">
-            						<b class="span1">
-              							<span class="design-tools2">Design Tools</span>
-            						</b>
-          					</p>
-          					<p class="im-tushar-kumar">
-            						<span class="span1">
-              							<span>Figma, Prototyping, UI/UX Design</span>
-            						</span>
-          					</p>
-        				</span>
-      			</div>
-    		</div>
-    		<div class="footer">
-      			<b class="contact-title" id="contact">Contact</b>
-      			<div class="contact-subtitle">Mr_Tushar_Kumar@proton.me</div>
-      			<div class="contact-icons">
-        				<img id="clickableIcon" class="instagram-icon" alt="" src="./assists/instagram.svg">
-        				
-        				<img id="clickableIcon-2" class="facebook-icon"  alt="" src="./assists/facebook.svg">
-        				
-        				<img id="clickableIcon-3" class="github-icon" alt="" src="./assists/github.svg">
-        				
-        				<img id="clickableIcon-1" class="email-icon" alt="" src="./assists/Email Icon.svg">
-        				
-      			</div>
-    		</div>
-  	</div>
-  	
-  	
-  	<script>
-		
-let sections = document.querySelectorAll('section'); 
-let navLinks = document.querySelectorAll('.navbar-nav .nav-link'); 
+        <!-- Template Gallery - Home -->
+        <div id="gallery-view" class="page-view flex-grow flex flex-col">
+            <!-- TopNavBar -->
+            <nav
+                class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-xl border-b border-white/10 shadow-sm glass">
+                <div class="flex justify-between items-center px-gutter py-md max-w-7xl mx-auto w-full">
+                    <div class="font-display text-h3 font-bold text-on-surface tracking-tight">
+                        TK<span class="text-primary">.</span>
+                    </div>
+                    <div class="hidden md:flex items-center gap-lg font-body-md text-body-md">
+                        <a class="nav-link text-primary font-bold border-b-2 border-primary pb-1" data-view="gallery"
+                            href="#gallery">Gallery</a>
+                        <a class="nav-link text-on-surface-variant hover:text-on-surface transition-colors"
+                            data-view="services" href="#services">Services</a>
+                        <a class="nav-link text-on-surface-variant hover:text-on-surface transition-colors"
+                            data-view="about" href="#about">About</a>
+                    </div>
+                    <div class="flex items-center gap-md">
+                        <a href="https://wa.me/923147177235?text=Hi%20Tushar!%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20hire%20you."
+                            target="_blank" rel="noopener"
+                            class="nav-link bg-primary text-on-primary px-lg py-sm rounded-full font-label-md text-label-md glow-shadow transition-all hover:scale-105 active:scale-95 font-bold flex items-center justify-center gap-2">
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+                            </svg>
+                            Hire Me
+                        </a>
+                    </div>
+                </div>
+            </nav>
 
-window.onscroll = () => {
-    sections.forEach(sec => { 
-        let top = window.scrollY; 
-        let offset = sec.offsetTop - 150; 
-        let height = sec.offsetHeight; 
-        let id = sec.getAttribute('id');
+            <!-- Main Content -->
+            <main class="flex-grow pt-xxl mt-xl px-gutter max-w-7xl mx-auto w-full">
+                <!-- Hero Section -->
+                <section class="text-center py-xxl mb-xl relative">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-b from-primary/10 to-transparent blur-3xl -z-10 rounded-full w-3/4 mx-auto h-full pointer-events-none">
+                    </div>
+                    <h1 class="font-display text-display mb-md tracking-tight gradient-text text-glow">AI-Powered Web
+                        Templates</h1>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-xl">
+                        Bespoke digital experiences crafted with precision. Explore our gallery of premium,
+                        high-performance templates designed for the modern web.
+                    </p>
+                    <button
+                        class="bg-primary text-on-primary px-xl py-md rounded-full font-h3 text-h3 glow-shadow transition-all hover:scale-105 active:scale-95 flex items-center gap-sm mx-auto font-bold shadow-lg shadow-primary/20">
+                        View Projects
+                        <span class="material-symbols-outlined"
+                            style="font-variation-settings: 'FILL' 1;">arrow_forward</span>
+                    </button>
+                </section>
 
-        if (top > offset && top < offset + height) {
-            navLinks.forEach(link => { 
-                link.classList.remove('active');
-                document.querySelector('header nav a[href="#' + id + '"]').classList.add('active');
+                <!-- Filter Bar -->
+                <section id="gallery-filters" class="mb-xl flex flex-wrap justify-center gap-sm reveal reveal-up">
+                    <button
+                        class="filter-btn px-lg py-sm rounded-full bg-primary text-[#121414] font-bold border border-primary transition-all shadow-lg shadow-primary/20 active"
+                        data-filter="all">All</button>
+                    <button
+                        class="filter-btn px-lg py-sm rounded-full bg-white/5 text-on-surface-variant border border-white/10 font-label-md text-label-md transition-all hover:text-on-surface hover:bg-white/10 glass-edge backdrop-blur-md"
+                        data-filter="restaurant">Restaurants</button>
+                    <button
+                        class="filter-btn px-lg py-sm rounded-full bg-white/5 text-on-surface-variant border border-white/10 font-label-md text-label-md transition-all hover:text-on-surface hover:bg-white/10 glass-edge backdrop-blur-md"
+                        data-filter="clinic">Clinic</button>
+                    <button
+                        class="filter-btn px-lg py-sm rounded-full bg-white/5 text-on-surface-variant border border-white/10 font-label-md text-label-md transition-all hover:text-on-surface hover:bg-white/10 glass-edge backdrop-blur-md"
+                        data-filter="ecommerce">E-commerce</button>
+                    <button
+                        class="filter-btn px-lg py-sm rounded-full bg-white/5 text-on-surface-variant border border-white/10 font-label-md text-label-md transition-all hover:text-on-surface hover:bg-white/10 glass-edge backdrop-blur-md"
+                        data-filter="hotel">Hotels</button>
+                    <button
+                        class="filter-btn px-lg py-sm rounded-full bg-white/5 text-on-surface-variant border border-white/10 font-label-md text-label-md transition-all hover:text-on-surface hover:bg-white/10 glass-edge backdrop-blur-md"
+                        data-filter="portfolio">Portfolio</button>
+                </section>
+
+                <!-- Template Grid -->
+                <section class="gallery-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-lg mb-xxl">
+                    <!-- Card 1 -->
+                    <div class="template-card group bg-surface-container-high rounded-xl overflow-hidden glass-edge transition-all duration-300 hover:scale-[1.02] hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(168,85,247,0.15)] cursor-pointer relative"
+                        data-title="Bella Cucina" data-url="https://MrTusharkumar.github.io/bella-cucina"
+                        data-category="restaurant">
+                        <div
+                            class="absolute top-0 right-0 w-32 h-32 bg-primary-container/20 rounded-full blur-2xl -mr-10 -mt-10 group-hover:bg-primary-container/40 transition-all duration-500">
+                        </div>
+                        <div class="aspect-video bg-surface-container-lowest overflow-hidden relative">
+                            <img alt="Bella Cucina"
+                                class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+                                src="assets/Bella Cucina.jpg" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-surface-container-high to-transparent opacity-60">
+                            </div>
+                        </div>
+                        <div class="p-lg relative z-10">
+                            <h3
+                                class="font-h3 text-h3 text-on-surface mb-sm group-hover:text-primary transition-colors">
+                                Bella Cucina</h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant mb-md line-clamp-2">Authentic
+                                Italian dining experience with a modern digital touch.</p>
+                            <div class="flex flex-wrap gap-xs">
+                                <span
+                                    class="bg-white/10 text-on-surface px-sm py-xs rounded-full font-label-sm text-label-sm backdrop-blur-sm">Restaurant</span>
+                                <span
+                                    class="bg-secondary-container/20 text-secondary px-sm py-xs rounded-full font-label-sm text-label-sm backdrop-blur-sm">Italian</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="template-card group bg-surface-container-high rounded-xl overflow-hidden glass-edge transition-all duration-300 hover:scale-[1.02] hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(168,85,247,0.15)] cursor-pointer relative"
+                        data-title="Bistro Boss" data-url="https://MrTusharkumar.github.io/bistro-boss"
+                        data-category="restaurant">
+                        <div
+                            class="absolute top-0 right-0 w-32 h-32 bg-secondary-container/20 rounded-full blur-2xl -mr-10 -mt-10 group-hover:bg-secondary-container/40 transition-all duration-500">
+                        </div>
+                        <div class="aspect-video bg-surface-container-lowest overflow-hidden relative">
+                            <img alt="Bistro Boss"
+                                class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+                                src="assets/BISTRO BOSS.jpg" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-surface-container-high to-transparent opacity-60">
+                            </div>
+                        </div>
+                        <div class="p-lg relative z-10">
+                            <h3
+                                class="font-h3 text-h3 text-on-surface mb-sm group-hover:text-primary transition-colors">
+                                Bistro Boss</h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant mb-md line-clamp-2">A
+                                high-performance bistro landing page with elegant animations.</p>
+                            <div class="flex flex-wrap gap-xs">
+                                <span
+                                    class="bg-white/10 text-on-surface px-sm py-xs rounded-full font-label-sm text-label-sm backdrop-blur-sm">Bistro</span>
+                                <span
+                                    class="bg-secondary-container/20 text-secondary px-sm py-xs rounded-full font-label-sm text-label-sm backdrop-blur-sm">Modern</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="template-card group bg-surface-container-high rounded-xl overflow-hidden glass-edge transition-all duration-300 hover:scale-[1.02] hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(168,85,247,0.15)] cursor-pointer relative"
+                        data-title="Cocktail" data-url="https://MrTusharkumar.github.io/cocktail" data-category="hotel">
+                        <div
+                            class="absolute top-0 right-0 w-32 h-32 bg-primary-container/20 rounded-full blur-2xl -mr-10 -mt-10 group-hover:bg-primary-container/40 transition-all duration-500">
+                        </div>
+                        <div class="aspect-video bg-surface-container-lowest overflow-hidden relative">
+                            <img alt="Cocktail"
+                                class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+                                src="assets/Cocktail.jpg" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-surface-container-high to-transparent opacity-60">
+                            </div>
+                        </div>
+                        <div class="p-lg relative z-10">
+                            <h3
+                                class="font-h3 text-h3 text-on-surface mb-sm group-hover:text-primary transition-colors">
+                                Cocktail</h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant mb-md line-clamp-2">Vibrant and
+                                interactive menu for premium cocktail lounges.</p>
+                            <div class="flex flex-wrap gap-xs">
+                                <span
+                                    class="bg-white/10 text-on-surface px-sm py-xs rounded-full font-label-sm text-label-sm backdrop-blur-sm">Lounge</span>
+                                <span
+                                    class="bg-secondary-container/20 text-secondary px-sm py-xs rounded-full font-label-sm text-label-sm backdrop-blur-sm">Bar</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="template-card group bg-surface-container-high rounded-xl overflow-hidden glass-edge transition-all duration-300 hover:scale-[1.02] hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(168,85,247,0.15)] cursor-pointer relative"
+                        data-title="Dineflex" data-url="https://MrTusharkumar.github.io/dineflex"
+                        data-category="restaurant">
+                        <div
+                            class="absolute top-0 right-0 w-32 h-32 bg-secondary-container/20 rounded-full blur-2xl -mr-10 -mt-10 group-hover:bg-secondary-container/40 transition-all duration-500">
+                        </div>
+                        <div class="aspect-video bg-surface-container-lowest overflow-hidden relative">
+                            <img alt="Dineflex"
+                                class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+                                src="assets/Dineflex.jpg" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-surface-container-high to-transparent opacity-60">
+                            </div>
+                        </div>
+                        <div class="p-lg relative z-10">
+                            <h3
+                                class="font-h3 text-h3 text-on-surface mb-sm group-hover:text-primary transition-colors">
+                                Dineflex</h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant mb-md line-clamp-2">Flexible
+                                dining solutions for fast-paced urban restaurants.</p>
+                            <div class="flex flex-wrap gap-xs">
+                                <span
+                                    class="bg-white/10 text-on-surface px-sm py-xs rounded-full font-label-sm text-label-sm backdrop-blur-sm">Casual</span>
+                                <span
+                                    class="bg-secondary-container/20 text-secondary px-sm py-xs rounded-full font-label-sm text-label-sm backdrop-blur-sm">Flexible</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 5 -->
+                    <div class="template-card group bg-surface-container-high rounded-xl overflow-hidden glass-edge transition-all duration-300 hover:scale-[1.02] hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(168,85,247,0.15)] cursor-pointer relative"
+                        data-title="Food Ordering App" data-url="https://MrTusharkumar.github.io/food-ordering-app"
+                        data-category="ecommerce">
+                        <div
+                            class="absolute top-0 right-0 w-32 h-32 bg-primary-container/20 rounded-full blur-2xl -mr-10 -mt-10 group-hover:bg-primary-container/40 transition-all duration-500">
+                        </div>
+                        <div class="aspect-video bg-surface-container-lowest overflow-hidden relative">
+                            <img alt="Food Ordering App"
+                                class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+                                src="assets/Food Ordering App.jpg" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-surface-container-high to-transparent opacity-60">
+                            </div>
+                        </div>
+                        <div class="p-lg relative z-10">
+                            <h3
+                                class="font-h3 text-h3 text-on-surface mb-sm group-hover:text-primary transition-colors">
+                                Food Ordering App</h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant mb-md line-clamp-2">A seamless
+                                food ordering interface optimized for mobile and web.</p>
+                            <div class="flex flex-wrap gap-xs">
+                                <span
+                                    class="bg-white/10 text-on-surface px-sm py-xs rounded-full font-label-sm text-label-sm backdrop-blur-sm">Ordering</span>
+                                <span
+                                    class="bg-secondary-container/20 text-secondary px-sm py-xs rounded-full font-label-sm text-label-sm backdrop-blur-sm">Mobile</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 6 -->
+                    <div class="template-card group bg-surface-container-high rounded-xl overflow-hidden glass-edge transition-all duration-300 hover:scale-[1.02] hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(168,85,247,0.15)] cursor-pointer relative"
+                        data-title="Pizza Man" data-url="https://MrTusharkumar.github.io/pizza-man"
+                        data-category="ecommerce">
+                        <div
+                            class="absolute top-0 right-0 w-32 h-32 bg-secondary-container/20 rounded-full blur-2xl -mr-10 -mt-10 group-hover:bg-secondary-container/40 transition-all duration-500">
+                        </div>
+                        <div class="aspect-video bg-surface-container-lowest overflow-hidden relative">
+                            <img alt="Pizza Man"
+                                class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+                                src="assets/Pizza Man.jpg" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-surface-container-high to-transparent opacity-60">
+                            </div>
+                        </div>
+                        <div class="p-lg relative z-10">
+                            <h3
+                                class="font-h3 text-h3 text-on-surface mb-sm group-hover:text-primary transition-colors">
+                                Pizza Man</h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant mb-md line-clamp-2">Dynamic
+                                pizza builder and ordering system for local pizzerias.</p>
+                            <div class="flex flex-wrap gap-xs">
+                                <span
+                                    class="bg-white/10 text-on-surface px-sm py-xs rounded-full font-label-sm text-label-sm backdrop-blur-sm">Pizza</span>
+                                <span
+                                    class="bg-secondary-container/20 text-secondary px-sm py-xs rounded-full font-label-sm text-label-sm backdrop-blur-sm">Builder</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 7 -->
+                    <div class="template-card group bg-surface-container-high rounded-xl overflow-hidden glass-edge transition-all duration-300 hover:scale-[1.02] hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(168,85,247,0.15)] cursor-pointer relative"
+                        data-title="Pizza Time (React)" data-url="https://MrTusharkumar.github.io/pizza-time-with-react"
+                        data-category="ecommerce">
+                        <div
+                            class="absolute top-0 right-0 w-32 h-32 bg-primary-container/20 rounded-full blur-2xl -mr-10 -mt-10 group-hover:bg-primary-container/40 transition-all duration-500">
+                        </div>
+                        <div class="aspect-video bg-surface-container-lowest overflow-hidden relative">
+                            <img alt="Pizza Time (React)"
+                                class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+                                src="assets/Pizza Time.jpg" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-surface-container-high to-transparent opacity-60">
+                            </div>
+                        </div>
+                        <div class="p-lg relative z-10">
+                            <h3
+                                class="font-h3 text-h3 text-on-surface mb-sm group-hover:text-primary transition-colors">
+                                Pizza Time</h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant mb-md line-clamp-2">
+                                Full-featured React application for pizza delivery services.</p>
+                            <div class="flex flex-wrap gap-xs">
+                                <span
+                                    class="bg-white/10 text-on-surface px-sm py-xs rounded-full font-label-sm text-label-sm backdrop-blur-sm">React</span>
+                                <span
+                                    class="bg-secondary-container/20 text-secondary px-sm py-xs rounded-full font-label-sm text-label-sm backdrop-blur-sm">Delivery</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 8 -->
+                    <div class="template-card group bg-surface-container-high rounded-xl overflow-hidden glass-edge transition-all duration-300 hover:scale-[1.02] hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(168,85,247,0.15)] cursor-pointer relative"
+                        data-title="Pizza" data-url="https://MrTusharkumar.github.io/pizza" data-category="restaurant">
+                        <div
+                            class="absolute top-0 right-0 w-32 h-32 bg-secondary-container/20 rounded-full blur-2xl -mr-10 -mt-10 group-hover:bg-secondary-container/40 transition-all duration-500">
+                        </div>
+                        <div class="aspect-video bg-surface-container-lowest overflow-hidden relative">
+                            <img alt="Pizza"
+                                class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+                                src="assets/Classic Pizza.jpg" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-surface-container-high to-transparent opacity-60">
+                            </div>
+                        </div>
+                        <div class="p-lg relative z-10">
+                            <h3
+                                class="font-h3 text-h3 text-on-surface mb-sm group-hover:text-primary transition-colors">
+                                Classic Pizza</h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant mb-md line-clamp-2">Traditional
+                                pizza parlor design with focus on local heritage.</p>
+                            <div class="flex flex-wrap gap-xs">
+                                <span
+                                    class="bg-white/10 text-on-surface px-sm py-xs rounded-full font-label-sm text-label-sm backdrop-blur-sm">Classic</span>
+                                <span
+                                    class="bg-secondary-container/20 text-secondary px-sm py-xs rounded-full font-label-sm text-label-sm backdrop-blur-sm">Local</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 9 -->
+                    <div class="template-card group bg-surface-container-high rounded-xl overflow-hidden glass-edge transition-all duration-300 hover:scale-[1.02] hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(168,85,247,0.15)] cursor-pointer relative"
+                        data-title="PizzaFlow" data-url="https://MrTusharkumar.github.io/pizzaflow"
+                        data-category="ecommerce">
+                        <div
+                            class="absolute top-0 right-0 w-32 h-32 bg-primary-container/20 rounded-full blur-2xl -mr-10 -mt-10 group-hover:bg-primary-container/40 transition-all duration-500">
+                        </div>
+                        <div class="aspect-video bg-surface-container-lowest overflow-hidden relative">
+                            <img alt="PizzaFlow"
+                                class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+                                src="assets/PizzaFlow.jpg" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-surface-container-high to-transparent opacity-60">
+                            </div>
+                        </div>
+                        <div class="p-lg relative z-10">
+                            <h3
+                                class="font-h3 text-h3 text-on-surface mb-sm group-hover:text-primary transition-colors">
+                                PizzaFlow</h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant mb-md line-clamp-2">Modern
+                                workflow-optimized ordering system for high-volume pizzerias.</p>
+                            <div class="flex flex-wrap gap-xs">
+                                <span
+                                    class="bg-white/10 text-on-surface px-sm py-xs rounded-full font-label-sm text-label-sm backdrop-blur-sm">Workflow</span>
+                                <span
+                                    class="bg-secondary-container/20 text-secondary px-sm py-xs rounded-full font-label-sm text-label-sm backdrop-blur-sm">Scalable</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 10 -->
+                    <div class="template-card group bg-surface-container-high rounded-xl overflow-hidden glass-edge transition-all duration-300 hover:scale-[1.02] hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(168,85,247,0.15)] cursor-pointer relative"
+                        data-title="React Pizza" data-url="https://MrTusharkumar.github.io/react-pizza"
+                        data-category="ecommerce">
+                        <div
+                            class="absolute top-0 right-0 w-32 h-32 bg-secondary-container/20 rounded-full blur-2xl -mr-10 -mt-10 group-hover:bg-secondary-container/40 transition-all duration-500">
+                        </div>
+                        <div class="aspect-video bg-surface-container-lowest overflow-hidden relative">
+                            <img alt="React Pizza"
+                                class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+                                src="assets/React Pizza Hub.jpg" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-surface-container-high to-transparent opacity-60">
+                            </div>
+                        </div>
+                        <div class="p-lg relative z-10">
+                            <h3
+                                class="font-h3 text-h3 text-on-surface mb-sm group-hover:text-primary transition-colors">
+                                React Pizza Hub</h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant mb-md line-clamp-2">
+                                Component-based pizza store with real-time state management.</p>
+                            <div class="flex flex-wrap gap-xs">
+                                <span
+                                    class="bg-white/10 text-on-surface px-sm py-xs rounded-full font-label-sm text-label-sm backdrop-blur-sm">React</span>
+                                <span
+                                    class="bg-secondary-container/20 text-secondary px-sm py-xs rounded-full font-label-sm text-label-sm backdrop-blur-sm">State</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 11 -->
+                    <div class="template-card group bg-surface-container-high rounded-xl overflow-hidden glass-edge transition-all duration-300 hover:scale-[1.02] hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(168,85,247,0.15)] cursor-pointer relative"
+                        data-title="React Restaurant"
+                        data-url="https://MrTusharkumar.github.io/react-restaurant-website" data-category="restaurant">
+                        <div
+                            class="absolute top-0 right-0 w-32 h-32 bg-primary-container/20 rounded-full blur-2xl -mr-10 -mt-10 group-hover:bg-primary-container/40 transition-all duration-500">
+                        </div>
+                        <div class="aspect-video bg-surface-container-lowest overflow-hidden relative">
+                            <img alt="React Restaurant"
+                                class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+                                src="assets/Elite React Dining.jpg" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-surface-container-high to-transparent opacity-60">
+                            </div>
+                        </div>
+                        <div class="p-lg relative z-10">
+                            <h3
+                                class="font-h3 text-h3 text-on-surface mb-sm group-hover:text-primary transition-colors">
+                                Elite React Dining</h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant mb-md line-clamp-2">
+                                Sophisticated restaurant portal built with cutting-edge React features.</p>
+                            <div class="flex flex-wrap gap-xs">
+                                <span
+                                    class="bg-white/10 text-on-surface px-sm py-xs rounded-full font-label-sm text-label-sm backdrop-blur-sm">React</span>
+                                <span
+                                    class="bg-secondary-container/20 text-secondary px-sm py-xs rounded-full font-label-sm text-label-sm backdrop-blur-sm">Premium</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 12 -->
+                    <div class="template-card group bg-surface-container-high rounded-xl overflow-hidden glass-edge transition-all duration-300 hover:scale-[1.02] hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(168,85,247,0.15)] cursor-pointer relative"
+                        data-title="Restro" data-url="https://MrTusharkumar.github.io/restro"
+                        data-category="restaurant">
+                        <div
+                            class="absolute top-0 right-0 w-32 h-32 bg-secondary-container/20 rounded-full blur-2xl -mr-10 -mt-10 group-hover:bg-secondary-container/40 transition-all duration-500">
+                        </div>
+                        <div class="aspect-video bg-surface-container-lowest overflow-hidden relative">
+                            <img alt="Restro"
+                                class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+                                src="assets/Restro Pro.jpg" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-surface-container-high to-transparent opacity-60">
+                            </div>
+                        </div>
+                        <div class="p-lg relative z-10">
+                            <h3
+                                class="font-h3 text-h3 text-on-surface mb-sm group-hover:text-primary transition-colors">
+                                Restro Pro</h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant mb-md line-clamp-2">Complete
+                                restaurant management and booking interface.</p>
+                            <div class="flex flex-wrap gap-xs">
+                                <span
+                                    class="bg-white/10 text-on-surface px-sm py-xs rounded-full font-label-sm text-label-sm backdrop-blur-sm">Pro</span>
+                                <span
+                                    class="bg-secondary-container/20 text-secondary px-sm py-xs rounded-full font-label-sm text-label-sm backdrop-blur-sm">Booking</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 13 -->
+                    <div class="template-card group bg-surface-container-high rounded-xl overflow-hidden glass-edge transition-all duration-300 hover:scale-[1.02] hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(168,85,247,0.15)] cursor-pointer relative"
+                        data-title="Savor Sphere" data-url="https://MrTusharkumar.github.io/savor-sphere"
+                        data-category="hotel">
+                        <div
+                            class="absolute top-0 right-0 w-32 h-32 bg-primary-container/20 rounded-full blur-2xl -mr-10 -mt-10 group-hover:bg-primary-container/40 transition-all duration-500">
+                        </div>
+                        <div class="aspect-video bg-surface-container-lowest overflow-hidden relative">
+                            <img alt="Savor Sphere"
+                                class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+                                src="assets/Savor Sphere.jpg" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-surface-container-high to-transparent opacity-60">
+                            </div>
+                        </div>
+                        <div class="p-lg relative z-10">
+                            <h3
+                                class="font-h3 text-h3 text-on-surface mb-sm group-hover:text-primary transition-colors">
+                                Savor Sphere</h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant mb-md line-clamp-2">Immersive
+                                dining experiences showcased in a spherical, modern layout.</p>
+                            <div class="flex flex-wrap gap-xs">
+                                <span
+                                    class="bg-white/10 text-on-surface px-sm py-xs rounded-full font-label-sm text-label-sm backdrop-blur-sm">Immersive</span>
+                                <span
+                                    class="bg-secondary-container/20 text-secondary px-sm py-xs rounded-full font-label-sm text-label-sm backdrop-blur-sm">Savor</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 14 -->
+                    <div class="template-card group bg-surface-container-high rounded-xl overflow-hidden glass-edge transition-all duration-300 hover:scale-[1.02] hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(168,85,247,0.15)] cursor-pointer relative"
+                        data-title="Template" data-url="https://MrTusharkumar.github.io/template"
+                        data-category="portfolio">
+                        <div
+                            class="absolute top-0 right-0 w-32 h-32 bg-secondary-container/20 rounded-full blur-2xl -mr-10 -mt-10 group-hover:bg-secondary-container/40 transition-all duration-500">
+                        </div>
+                        <div class="aspect-video bg-surface-container-lowest overflow-hidden relative">
+                            <img alt="Base Template"
+                                class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+                                src="assets/Universal Template.jpg" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-surface-container-high to-transparent opacity-60">
+                            </div>
+                        </div>
+                        <div class="p-lg relative z-10">
+                            <h3
+                                class="font-h3 text-h3 text-on-surface mb-sm group-hover:text-primary transition-colors">
+                                Universal Template</h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant mb-md line-clamp-2">A versatile,
+                                highly customizable base template for any culinary brand.</p>
+                            <div class="flex flex-wrap gap-xs">
+                                <span
+                                    class="bg-white/10 text-on-surface px-sm py-xs rounded-full font-label-sm text-label-sm backdrop-blur-sm">Universal</span>
+                                <span
+                                    class="bg-secondary-container/20 text-secondary px-sm py-xs rounded-full font-label-sm text-label-sm backdrop-blur-sm">Base</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 15 (Clinic) -->
+                    <div class="template-card group bg-surface-container-high rounded-xl overflow-hidden glass-edge transition-all duration-300 hover:scale-[1.02] hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(168,85,247,0.15)] cursor-pointer relative"
+                        data-title="HealthCare Pro" data-url="https://MrTusharkumar.github.io/healthcare-pro"
+                        data-category="clinic">
+                        <div
+                            class="absolute top-0 right-0 w-32 h-32 bg-primary-container/20 rounded-full blur-2xl -mr-10 -mt-10 group-hover:bg-primary-container/40 transition-all duration-500">
+                        </div>
+                        <div class="aspect-video bg-surface-container-lowest overflow-hidden relative">
+                            <img alt="HealthCare Pro"
+                                class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+                                src="assets/Elite React Dining.jpg" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-surface-container-high to-transparent opacity-60">
+                            </div>
+                        </div>
+                        <div class="p-lg relative z-10">
+                            <h3
+                                class="font-h3 text-h3 text-on-surface mb-sm group-hover:text-primary transition-colors">
+                                HealthCare Pro</h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant mb-md line-clamp-2">Modern
+                                clinic management and patient booking system.</p>
+                            <div class="flex flex-wrap gap-xs">
+                                <span
+                                    class="bg-white/10 text-on-surface px-sm py-xs rounded-full font-label-sm text-label-sm backdrop-blur-sm">Clinic</span>
+                                <span
+                                    class="bg-secondary-container/20 text-secondary px-sm py-xs rounded-full font-label-sm text-label-sm backdrop-blur-sm">Medical</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <!-- Footer -->
+            <footer class="bg-surface-container-lowest mt-auto w-full">
+                <div
+                    class="flex flex-col md:flex-row justify-between items-center px-gutter py-xl border-t border-outline-variant w-full max-w-7xl mx-auto">
+                    <div class="font-display text-h3 text-on-surface mb-md md:mb-0">
+                        Lumina Digital
+                    </div>
+                    <div
+                        class="flex flex-wrap justify-center gap-lg font-label-sm text-label-sm text-on-surface-variant mb-md md:mb-0">
+                        <a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+                        <a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+                        <a class="hover:text-primary transition-colors" href="#">Cookie Policy</a>
+                        <a class="hover:text-primary transition-colors" href="#">Contact Us</a>
+                    </div>
+                    <div class="font-label-sm text-label-sm text-on-surface-variant">
+                        © 2024 Lumina Digital Atelier. All rights reserved.
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <!-- Live Preview Explorer -->
+        <div id="preview-view" class="page-view hidden h-screen flex flex-col bg-background overflow-hidden">
+            <!-- Top Navigation Bar -->
+            <header
+                class="flex-none h-[72px] bg-surface-container-low/80 backdrop-blur-xl border-b border-outline-variant/30 flex items-center justify-between px-gutter z-50">
+                <!-- Left: Back Action -->
+                <div class="flex-1 flex justify-start">
+                    <button id="back-to-gallery"
+                        class="flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors group">
+                        <span
+                            class="material-symbols-outlined text-[20px] group-hover:-translate-x-1 transition-transform">arrow_back</span>
+                        <span class="font-label-md text-label-md preview-nav-label">Back to Gallery</span>
+                    </button>
+                </div>
+                <!-- Center: Device Toggles -->
+                <div
+                    class="flex-none flex items-center p-1 bg-surface-container-high rounded-lg border border-outline-variant/50 shadow-inner">
+                    <button id="device-desktop" aria-label="Desktop View"
+                        class="device-toggle flex items-center justify-center p-1.5 min-w-[40px] rounded-md bg-secondary-container text-on-secondary-container shadow-sm transition-all">
+                        <span class="material-symbols-outlined text-[20px]"
+                            style="font-variation-settings: 'FILL' 1;">desktop_windows</span>
+                    </button>
+                    <button id="device-tablet" aria-label="Tablet View"
+                        class="device-toggle flex items-center justify-center p-1.5 min-w-[40px] rounded-md text-on-surface-variant hover:text-on-surface hover:bg-surface-bright transition-all">
+                        <span class="material-symbols-outlined text-[20px]">tablet_mac</span>
+                    </button>
+                    <button id="device-mobile" aria-label="Mobile View"
+                        class="device-toggle flex items-center justify-center p-1.5 min-w-[40px] rounded-md text-on-surface-variant hover:text-on-surface hover:bg-surface-bright transition-all">
+                        <span class="material-symbols-outlined text-[20px]">smartphone</span>
+                    </button>
+                </div>
+                <!-- Right: Primary Action -->
+                <div class="flex-1 flex justify-end">
+                    <a href="https://wa.me/923147177235?text=Hi%20Tushar!%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20hire%20you."
+                        target="_blank" rel="noopener"
+                        class="px-3 md:px-6 py-2.5 bg-gradient-to-r from-primary-container to-inverse-primary text-white rounded-full font-label-md text-label-md shadow-[0_0_15px_rgba(168,85,247,0.2)] hover:shadow-[0_0_25px_rgba(168,85,247,0.4)] hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center gap-2">
+                        <span class="preview-nav-label">Hire Me</span>
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+                        </svg>
+                    </a>
+                </div>
+            </header>
+
+            <!-- Main Workspace -->
+            <main class="flex-1 flex justify-center items-center p-4 md:p-8 overflow-hidden relative"
+                style="background-image: radial-gradient(circle at center, #4d4354 1px, transparent 1px); background-size: 24px 24px;">
+                <!-- Mock Iframe Container -->
+                <div id="preview-container"
+                    class="w-full h-full max-w-[1280px] bg-[#ffffff] rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden transition-all duration-700 ease-in-out border border-outline-variant/50 flex flex-col relative z-10">
+                    <!-- Live Iframe Container -->
+                    <div class="flex-1 bg-white overflow-hidden flex flex-col font-sans text-gray-800 relative">
+                        <iframe id="preview-iframe" class="w-full h-full border-none" src="about:blank"></iframe>
+                        <!-- Loading Overlay -->
+                        <div id="preview-loader"
+                            class="absolute inset-0 bg-surface flex items-center justify-center z-20">
+                            <div class="flex flex-col items-center gap-4">
+                                <div
+                                    class="w-12 h-12 border-4 border-primary/30 border-t-primary rounded-full animate-spin">
+                                </div>
+                                <p class="font-label-md text-label-md text-on-surface-variant">Loading Preview...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+    </div><!-- /view-gallery spa-view -->
+
+    <!-- ═══════════════════════════════════════════════════
+     SERVICES VIEW
+════════════════════════════════════════════════════ -->
+    <div id="view-services" class="spa-view bg-[#121414] min-h-screen">
+        <!-- Shared Nav (Services active) -->
+        <nav class="fixed top-0 w-full z-50 bg-[#121414]/80 backdrop-blur-xl border-b border-white/10 shadow-sm glass">
+            <div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto w-full">
+                <a href="#gallery" class="nav-link font-display text-xl font-bold text-white tracking-tight"
+                    data-view="gallery">
+                    TK<span class="text-primary">.</span>
+                </a>
+                <div class="hidden md:flex items-center gap-8 text-base font-medium">
+                    <a class="nav-link text-on-surface-variant hover:text-white transition-colors" data-view="gallery"
+                        href="#gallery">Gallery</a>
+                    <a class="text-primary font-bold border-b-2 border-primary pb-1">Services</a>
+                    <a class="nav-link text-on-surface-variant hover:text-white transition-colors" data-view="about"
+                        href="#about">About</a>
+                </div>
+                <div class="flex items-center gap-4">
+                    <a href="https://wa.me/923147177235?text=Hi%20Tushar!%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20hire%20you."
+                        target="_blank" rel="noopener"
+                        class="bg-primary text-[#121414] px-6 py-2 rounded-full font-bold text-sm hover:scale-105 active:scale-95 transition-all shadow-lg shadow-primary/20 flex items-center justify-center gap-2">
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+                        </svg>
+                        Hire Me
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Services Header -->
+        <header class="pt-32 pb-16 md:pt-40 md:pb-20 px-6 max-w-7xl mx-auto text-center relative z-10 reveal reveal-up">
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] max-w-[800px] aspect-square bg-primary/10 blur-[100px] rounded-full pointer-events-none -z-10">
+            </div>
+            <div class="inline-flex items-center gap-4 mb-6">
+                <div class="w-8 h-[2px] bg-primary"></div><span
+                    class="text-sm font-bold uppercase tracking-widest text-primary">Capabilities</span>
+                <div class="w-8 h-[2px] bg-primary"></div>
+            </div>
+            <h1 class="text-6xl md:text-8xl font-bold text-white mb-8 tracking-tighter">Growth-Focused <span
+                    class="text-primary">Solutions.</span></h1>
+            <p class="text-lg md:text-xl text-[#94a3b8] max-w-2xl mx-auto">I don't just write code; I build digital
+                assets that save you time, increase your revenue, and scale your business to the next level.</p>
+        </header>
+
+        <!-- Capabilities Grid -->
+        <section class="px-6 pb-32 max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Frontend -->
+                <div
+                    class="bg-[#1e2020] border border-white/10 rounded-[2rem] p-8 md:p-14 hover:border-primary/50 transition-colors reveal reveal-left group">
+                    <div
+                        class="w-20 h-20 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-8 group-hover:scale-110 group-hover:bg-primary group-hover:text-[#121414] transition-all duration-300">
+                        <span class="material-symbols-outlined text-4xl">devices</span>
+                    </div>
+                    <h3 class="text-3xl font-bold text-white mb-4">High-Converting User Interfaces</h3>
+                    <p class="text-[#94a3b8] text-lg mb-8 leading-relaxed">I build fast, beautiful websites that turn
+                        visitors into customers. Your site will look premium on every device, ensuring you never lose a
+                        lead due to poor design or slow loading times.</p>
+                    <div class="flex flex-wrap gap-3">
+                        <span
+                            class="px-4 py-2 rounded-full bg-white/5 text-white/80 text-sm font-medium border border-white/10">Responsive
+                            Design</span>
+                        <span
+                            class="px-4 py-2 rounded-full bg-white/5 text-white/80 text-sm font-medium border border-white/10">Premium
+                            Animations</span>
+                        <span
+                            class="px-4 py-2 rounded-full bg-white/5 text-white/80 text-sm font-medium border border-white/10">User-Friendly
+                            Flow</span>
+                    </div>
+                </div>
+
+                <!-- Backend -->
+                <div
+                    class="bg-[#1e2020] border border-white/10 rounded-[2rem] p-8 md:p-14 hover:border-primary/50 transition-colors reveal reveal-right group">
+                    <div
+                        class="w-20 h-20 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-8 group-hover:scale-110 group-hover:bg-primary group-hover:text-[#121414] transition-all duration-300">
+                        <span class="material-symbols-outlined text-4xl">settings_suggest</span>
+                    </div>
+                    <h3 class="text-3xl font-bold text-white mb-4">Secure & Scalable Systems</h3>
+                    <p class="text-[#94a3b8] text-lg mb-8 leading-relaxed">Robust server solutions that handle your
+                        business growth. From secure payment integrations to custom order management tools, I build the
+                        engine that powers your business operations reliably.</p>
+                    <div class="flex flex-wrap gap-3">
+                        <span
+                            class="px-4 py-2 rounded-full bg-white/5 text-white/80 text-sm font-medium border border-white/10">Secure
+                            Payments</span>
+                        <span
+                            class="px-4 py-2 rounded-full bg-white/5 text-white/80 text-sm font-medium border border-white/10">Automated
+                            Flows</span>
+                        <span
+                            class="px-4 py-2 rounded-full bg-white/5 text-white/80 text-sm font-medium border border-white/10">Data
+                            Protection</span>
+                    </div>
+                </div>
+
+                <!-- Database -->
+                <div
+                    class="bg-[#1e2020] border border-white/10 rounded-[2rem] p-8 md:p-14 hover:border-primary/50 transition-colors reveal reveal-left delay-200 group">
+                    <div
+                        class="w-20 h-20 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-8 group-hover:scale-110 group-hover:bg-primary group-hover:text-[#121414] transition-all duration-300">
+                        <span class="material-symbols-outlined text-4xl">analytics</span>
+                    </div>
+                    <h3 class="text-3xl font-bold text-white mb-4">Intelligent Data Management</h3>
+                    <p class="text-[#94a3b8] text-lg mb-8 leading-relaxed">Organizing your business information for
+                        maximum efficiency. I ensure your customer data and order history are safe, accessible, and
+                        optimized to help you make better business decisions.</p>
+                    <div class="flex flex-wrap gap-3">
+                        <span
+                            class="px-4 py-2 rounded-full bg-white/5 text-white/80 text-sm font-medium border border-white/10">Inventory
+                            Tracking</span>
+                        <span
+                            class="px-4 py-2 rounded-full bg-white/5 text-white/80 text-sm font-medium border border-white/10">Customer
+                            Insights</span>
+                        <span
+                            class="px-4 py-2 rounded-full bg-white/5 text-white/80 text-sm font-medium border border-white/10">Fast
+                            Retrieval</span>
+                    </div>
+                </div>
+
+                <!-- UI/UX & Optimization -->
+                <div
+                    class="bg-[#1e2020] border border-white/10 rounded-[2rem] p-8 md:p-14 hover:border-primary/50 transition-colors reveal reveal-right delay-200 group">
+                    <div
+                        class="w-20 h-20 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-8 group-hover:scale-110 group-hover:bg-primary group-hover:text-[#121414] transition-all duration-300">
+                        <span class="material-symbols-outlined text-4xl">trending_up</span>
+                    </div>
+                    <h3 class="text-3xl font-bold text-white mb-4">Search Visibility & Growth</h3>
+                    <p class="text-[#94a3b8] text-lg mb-8 leading-relaxed">Getting your business in front of the right
+                        people. I optimize your site to rank higher on Google and load instantly, significantly reducing
+                        bounce rates and increasing your sales potential.</p>
+                    <div class="flex flex-wrap gap-3">
+                        <span
+                            class="px-4 py-2 rounded-full bg-white/5 text-white/80 text-sm font-medium border border-white/10">SEO
+                            Optimized</span>
+                        <span
+                            class="px-4 py-2 rounded-full bg-white/5 text-white/80 text-sm font-medium border border-white/10">Instant
+                            Loading</span>
+                        <span
+                            class="px-4 py-2 rounded-full bg-white/5 text-white/80 text-sm font-medium border border-white/10">Google
+                            Top Rank</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The "Why" Section - Business Value -->
+        <section class="px-6 py-24 bg-white/5 relative overflow-hidden">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
+                <div class="w-full md:w-1/2 reveal reveal-left">
+                    <h2 class="text-4xl md:text-5xl font-bold text-white mb-8 tracking-tighter">Stop Giving Away <span
+                            class="text-primary">30% of Your Revenue.</span></h2>
+                    <div class="space-y-6 text-[#94a3b8] text-lg leading-relaxed">
+                        <p>When you rely solely on third-party delivery apps, you're paying massive commission fees that
+                            eat into your profits. I build custom ordering systems that belong to <span
+                                class="text-white font-bold">you.</span></p>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <span class="material-icons text-primary mt-1">check_circle</span>
+                                <span><strong class="text-white">Zero Commission Fees:</strong> Keep 100% of every order
+                                    revenue instead of losing it to big tech apps.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-icons text-primary mt-1">check_circle</span>
+                                <span><strong class="text-white">Eliminate Order Mistakes:</strong> A streamlined,
+                                    custom-built flow ensures orders are accurate every single time.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-icons text-primary mt-1">check_circle</span>
+                                <span><strong class="text-white">Direct Customer Relationships:</strong> Build your own
+                                    database and market directly to your loyal customers.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 reveal reveal-right">
+                    <div
+                        class="relative bg-[#1e2020] border border-white/10 rounded-[3rem] p-8 md:p-12 overflow-hidden group shadow-2xl">
+                        <div class="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity">
+                        </div>
+                        <div class="relative z-10 flex flex-col gap-8">
+                            <div class="flex items-center gap-6">
+                                <div
+                                    class="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+                                    <span class="material-icons text-3xl">savings</span>
+                                </div>
+                                <div>
+                                    <h4 class="text-2xl font-bold text-white">Save $1,000s Monthly</h4>
+                                    <p class="text-[#94a3b8]">By cutting out middle-man fees.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-6">
+                                <div
+                                    class="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+                                    <span class="material-icons text-3xl">bolt</span>
+                                </div>
+                                <div>
+                                    <h4 class="text-2xl font-bold text-white">Instant Scalability</h4>
+                                    <p class="text-[#94a3b8]">Your business, your rules, your platform.</p>
+                                </div>
+                            </div>
+                            <a href="#about"
+                                class="mt-4 inline-flex items-center gap-4 bg-primary text-[#121414] px-8 py-4 rounded-full font-bold hover:scale-105 transition-all text-center justify-center">Calculate
+                                Your Savings</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Development Process -->
+        <section class="bg-primary py-32 px-6">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-20 reveal reveal-up">
+                    <h2 class="text-5xl md:text-6xl font-bold text-[#121414] mb-6 tracking-tighter">My Process.</h2>
+                    <p class="text-[#121414]/80 text-xl max-w-2xl mx-auto font-medium">A streamlined approach to
+                        transforming your ideas into production-ready digital products.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+                    <!-- Connecting Line -->
+                    <div
+                        class="hidden md:block absolute top-1/2 left-0 w-full h-[2px] bg-[#121414]/10 -translate-y-1/2">
+                    </div>
+
+                    <!-- Steps -->
+                    <div
+                        class="relative bg-white/10 backdrop-blur-md p-8 rounded-[2rem] border border-white/20 text-[#121414] text-center reveal reveal-up hover:-translate-y-4 transition-all">
+                        <div
+                            class="w-16 h-16 bg-[#121414] text-primary rounded-full flex items-center justify-center text-2xl font-black mx-auto mb-6 shadow-xl">
+                            1</div>
+                        <h3 class="text-2xl font-bold mb-4">Discovery</h3>
+                        <p class="font-medium opacity-80">Understanding your business goals, target audience, and
+                            technical requirements.</p>
+                    </div>
+                    <div
+                        class="relative bg-white/10 backdrop-blur-md p-8 rounded-[2rem] border border-white/20 text-[#121414] text-center reveal reveal-up delay-100 hover:-translate-y-4 transition-all">
+                        <div
+                            class="w-16 h-16 bg-[#121414] text-primary rounded-full flex items-center justify-center text-2xl font-black mx-auto mb-6 shadow-xl">
+                            2</div>
+                        <h3 class="text-2xl font-bold mb-4">Design</h3>
+                        <p class="font-medium opacity-80">Creating wireframes, UI/UX mockups, and planning the
+                            application architecture.</p>
+                    </div>
+                    <div
+                        class="relative bg-white/10 backdrop-blur-md p-8 rounded-[2rem] border border-white/20 text-[#121414] text-center reveal reveal-up delay-200 hover:-translate-y-4 transition-all">
+                        <div
+                            class="w-16 h-16 bg-[#121414] text-primary rounded-full flex items-center justify-center text-2xl font-black mx-auto mb-6 shadow-xl">
+                            3</div>
+                        <h3 class="text-2xl font-bold mb-4">Development</h3>
+                        <p class="font-medium opacity-80">Writing clean, maintainable code with modern frameworks and
+                            robust backend systems.</p>
+                    </div>
+                    <div
+                        class="relative bg-white/10 backdrop-blur-md p-8 rounded-[2rem] border border-white/20 text-[#121414] text-center reveal reveal-up delay-300 hover:-translate-y-4 transition-all">
+                        <div
+                            class="w-16 h-16 bg-[#121414] text-primary rounded-full flex items-center justify-center text-2xl font-black mx-auto mb-6 shadow-xl">
+                            4</div>
+                        <h3 class="text-2xl font-bold mb-4">Deployment</h3>
+                        <p class="font-medium opacity-80">Testing, optimization, and seamless deployment to production
+                            environments.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="py-32 px-6 max-w-7xl mx-auto">
+            <div class="text-center mb-20 reveal reveal-up">
+                <div class="inline-flex items-center gap-4 mb-6">
+                    <div class="w-8 h-[2px] bg-primary"></div><span
+                        class="text-sm font-bold uppercase tracking-widest text-primary">Testimonials</span>
+                    <div class="w-8 h-[2px] bg-primary"></div>
+                </div>
+                <h2 class="text-5xl md:text-6xl font-bold text-white mb-6 tracking-tighter">What My Clients Say.</h2>
+                <p class="text-[#94a3b8] text-xl max-w-2xl mx-auto">Real stories from business owners who transformed
+                    their operations with custom digital solutions.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div
+                    class="bg-[#1e2020] border border-white/10 rounded-[2rem] p-10 reveal reveal-up hover:border-primary/30 transition-all group">
+                    <div class="flex text-primary mb-6"><span class="material-icons">star</span><span
+                            class="material-icons">star</span><span class="material-icons">star</span><span
+                            class="material-icons">star</span><span class="material-icons">star</span></div>
+                    <p class="text-[#94a3b8] italic mb-8 leading-relaxed">"Tushar built our restaurant ordering app from
+                        scratch. We've saved over $2,000 in monthly commission fees since launching. Highly
+                        recommended!"</p>
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-white font-bold">
+                            AK</div>
+                        <div>
+                            <h4 class="text-white font-bold">Ahmed Khan</h4>
+                            <p class="text-primary text-xs uppercase font-bold">Restaurant Owner</p>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="bg-[#1e2020] border border-white/10 rounded-[2rem] p-10 reveal reveal-up delay-100 hover:border-primary/30 transition-all group">
+                    <div class="flex text-primary mb-6"><span class="material-icons">star</span><span
+                            class="material-icons">star</span><span class="material-icons">star</span><span
+                            class="material-icons">star</span><span class="material-icons">star</span></div>
+                    <p class="text-[#94a3b8] italic mb-8 leading-relaxed">"Our website load time went from 8 seconds to
+                        under 1 second. Our bounce rate dropped by 40% and bookings have increased significantly."</p>
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-white font-bold">
+                            MS</div>
+                        <div>
+                            <h4 class="text-white font-bold">Maria Smith</h4>
+                            <p class="text-primary text-xs uppercase font-bold">Boutique Owner</p>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="bg-[#1e2020] border border-white/10 rounded-[2rem] p-10 reveal reveal-up delay-200 hover:border-primary/30 transition-all group">
+                    <div class="flex text-primary mb-6"><span class="material-icons">star</span><span
+                            class="material-icons">star</span><span class="material-icons">star</span><span
+                            class="material-icons">star</span><span class="material-icons">star</span></div>
+                    <p class="text-[#94a3b8] italic mb-8 leading-relaxed">"Excellent communication and technical skill.
+                        Tushar understood our business needs and delivered a perfect inventory management system."</p>
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-white font-bold">
+                            JD</div>
+                        <div>
+                            <h4 class="text-white font-bold">James David</h4>
+                            <p class="text-primary text-xs uppercase font-bold">Startup Founder</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New Testimonials -->
+                <div
+                    class="bg-[#1e2020] border border-white/10 rounded-[2rem] p-10 reveal reveal-up hover:border-primary/30 transition-all group">
+                    <div class="flex text-primary mb-6"><span class="material-icons">star</span><span
+                            class="material-icons">star</span><span class="material-icons">star</span><span
+                            class="material-icons">star</span><span class="material-icons">star</span></div>
+                    <p class="text-[#94a3b8] italic mb-8 leading-relaxed">"The patient portal has reduced our call
+                        volume by 60%. Patients love the ease of booking, and the design is incredibly professional."
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-white font-bold">
+                            SM</div>
+                        <div>
+                            <h4 class="text-white font-bold">Dr. Sarah Mitchell</h4>
+                            <p class="text-primary text-xs uppercase font-bold">Clinic Director</p>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="bg-[#1e2020] border border-white/10 rounded-[2rem] p-10 reveal reveal-up delay-100 hover:border-primary/30 transition-all group">
+                    <div class="flex text-primary mb-6"><span class="material-icons">star</span><span
+                            class="material-icons">star</span><span class="material-icons">star</span><span
+                            class="material-icons">star</span><span class="material-icons">star</span></div>
+                    <p class="text-[#94a3b8] italic mb-8 leading-relaxed">"Our direct bookings increased by 25% within
+                        the first month. The integrated room showcase and booking flow are world-class."</p>
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-white font-bold">
+                            MR</div>
+                        <div>
+                            <h4 class="text-white font-bold">Marco Rossi</h4>
+                            <p class="text-primary text-xs uppercase font-bold">Hotel Manager</p>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="bg-[#1e2020] border border-white/10 rounded-[2rem] p-10 reveal reveal-up delay-200 hover:border-primary/30 transition-all group">
+                    <div class="flex text-primary mb-6"><span class="material-icons">star</span><span
+                            class="material-icons">star</span><span class="material-icons">star</span><span
+                            class="material-icons">star</span><span class="material-icons">star</span></div>
+                    <p class="text-[#94a3b8] italic mb-8 leading-relaxed">"Tushar's ability to translate complex brand
+                        identities into clean, interactive websites is unmatched. A true professional."</p>
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-white font-bold">
+                            LC</div>
+                        <div>
+                            <h4 class="text-white font-bold">Liam Chen</h4>
+                            <p class="text-primary text-xs uppercase font-bold">Creative Director</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="py-32 px-6 max-w-4xl mx-auto text-center reveal reveal-up">
+            <h2 class="text-4xl md:text-6xl font-bold text-white mb-8">Ready to start a project?</h2>
+            <p class="text-xl text-[#94a3b8] mb-12">Let's build something extraordinary together. Reach out and let's
+                discuss your vision.</p>
+            <a href="https://wa.me/923147177235?text=Hi%20Tushar!%20I'm%20interested%20in%20your%20services."
+                target="_blank" rel="noopener"
+                class="inline-flex items-center gap-4 bg-primary text-[#121414] px-10 py-5 rounded-full font-bold text-lg hover:scale-105 active:scale-95 transition-all shadow-lg shadow-primary/20">
+                <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+                </svg>
+                Discuss Your Project
+            </a>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-[#121414] py-20 px-margin-x border-t border-white/5">
+            <div class="container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+                <a class="text-2xl font-black text-white tracking-tighter" href="#gallery"
+                    data-view="gallery">TUSHAR<span class="text-primary">.</span></a>
+                <div class="flex gap-8">
+                    <a class="text-[#94a3b8] hover:text-white transition-colors"
+                        href="https://www.linkedin.com/in/rk-engineers" target="_blank" rel="noopener">LinkedIn</a>
+                    <a class="text-[#94a3b8] hover:text-white transition-colors" href="https://github.com/MrTusharkumar"
+                        target="_blank">GitHub</a>
+                    <a class="text-[#94a3b8] hover:text-white transition-colors"
+                        href="mailto:tk990822@gmail.com">Email</a>
+                </div>
+                <p class="text-[#94a3b8] text-sm">© 2025 Tushar Kumar. Built with passion & precision.</p>
+            </div>
+        </footer>
+    </div><!-- /view-services -->
+
+    <!-- ═══════════════════════════════════════════════════
+     ABOUT VIEW
+════════════════════════════════════════════════════ -->
+    <div id="view-about" class="spa-view bg-background-dark min-h-screen" style="--background-dark:#121414;">
+
+        <!-- Shared Nav (About active) -->
+        <nav class="fixed top-0 w-full z-50 bg-[#121414]/80 backdrop-blur-xl border-b border-white/10 shadow-sm glass">
+            <div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto w-full">
+                <a href="#gallery" class="nav-link font-display text-xl font-bold text-white tracking-tight"
+                    data-view="gallery">
+                    TK<span class="text-primary">.</span>
+                </a>
+                <div class="hidden md:flex items-center gap-8 text-base font-medium">
+                    <a class="nav-link text-on-surface-variant hover:text-white transition-colors" data-view="gallery"
+                        href="#gallery">Gallery</a>
+                    <a class="nav-link text-on-surface-variant hover:text-white transition-colors" data-view="services"
+                        href="#services">Services</a>
+                    <a class="text-primary font-bold border-b-2 border-primary pb-1">About</a>
+                </div>
+                <div class="flex items-center gap-4">
+                    <a href="https://wa.me/923147177235?text=Hi%20Tushar!%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20hire%20you."
+                        target="_blank" rel="noopener"
+                        class="bg-primary text-[#121414] px-6 py-2 rounded-full font-bold text-sm hover:scale-105 active:scale-95 transition-all shadow-lg shadow-primary/20 flex items-center justify-center gap-2">
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+                        </svg>
+                        Hire Me
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero -->
+        <main
+            class="about-hero-main relative px-6 lg:px-12 xl:px-24 min-h-screen flex flex-col md:flex-row items-center justify-between z-10 overflow-hidden pt-32 md:pt-0 bg-[#121414]">
+            <div class="absolute top-1/4 -left-20 w-96 h-96 bg-primary/5 blur-[120px] rounded-full pointer-events-none">
+            </div>
+            <div
+                class="absolute bottom-1/4 -right-20 w-96 h-96 bg-primary/10 blur-[120px] rounded-full pointer-events-none">
+            </div>
+
+            <div class="about-hero-name w-full md:w-[20%] z-20 mb-12 md:mb-0">
+                <div class="reveal reveal-left">
+                    <h1
+                        class="text-6xl md:text-8xl lg:text-9xl font-bold leading-tight tracking-tighter mb-8 text-white">
+                        Tushar<br /><span class="text-gradient">Kumar.</span>
+                    </h1>
+                    <div class="w-24 h-2 bg-primary rounded-full mb-16 shadow-lg shadow-primary/40"></div>
+                </div>
+                <div class="reveal reveal-up delay-300 hidden md:flex gap-8 items-center text-[#94a3b8]">
+                    <a class="hover:text-primary transition-all hover:-translate-y-1"
+                        href="https://github.com/MrTusharkumar" target="_blank">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd"
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 00-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0112 3.475zm-3.633.803a53.896 53.896 0 013.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 014.729-5.975zM3.453 12.01v-.26c.37.01 4.512.065 8.775-1.215.25.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 01-2.19-5.705zM12 20.547a8.482 8.482 0 01-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 011.823 6.475 8.4 8.4 0 01-3.341.684zm4.761-1.465c-.086-.52-.542-3.015-1.659-6.084 2.679-.314 5.322.24 5.42.261a8.487 8.487 0 01-3.761 5.823z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </a>
+                    <a class="hover:text-primary transition-all hover:-translate-y-1"
+                        href="https://www.linkedin.com/in/rk-engineers" target="_blank" rel="noopener"
+                        aria-label="LinkedIn Profile">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd"
+                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div
+                class="about-hero-img w-full md:w-[36%] flex items-center justify-start relative h-[450px] md:h-screen md:-ml-8">
+                <div
+                    class="absolute inset-0 w-[150%] left-1/2 -translate-x-1/2 bg-primary/10 blur-[100px] rounded-full transform scale-75 animate-pulse pointer-events-none">
+                </div>
+                <div class="reveal reveal-scale relative z-10 h-full w-full flex items-end justify-center">
+                    <div class="relative w-full h-full flex items-end justify-center">
+                        <img alt="Tushar Kumar"
+                            class="h-full w-auto max-w-full object-contain object-bottom select-none filter drop-shadow-[0_30px_60px_rgba(255,193,7,0.15)] transition-transform duration-700 ease-in-out hover:scale-105"
+                            src="assets/pic6.png" />
+                        <div
+                            class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#121414] to-transparent pointer-events-none">
+                        </div>
+                    </div>
+                    <div
+                        class="absolute top-1/4 -right-4 bg-white/5 backdrop-blur-xl border border-white/10 p-6 rounded-[1.5rem] shadow-2xl animate-float hidden lg:block">
+                        <div class="flex items-center gap-4">
+                            <div class="relative">
+                                <div
+                                    class="w-12 h-12 bg-primary rounded-full flex items-center justify-center shadow-lg shadow-primary/40">
+                                    <span class="material-icons text-[#121414] text-lg">code</span>
+                                </div>
+                                <span
+                                    class="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full border-2 border-[#121414] animate-ping"></span>
+                                <span
+                                    class="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full border-2 border-[#121414]"></span>
+                            </div>
+                            <div>
+                                <p class="text-white font-bold text-sm">Available for</p>
+                                <p class="text-primary text-xs font-semibold">Remote Work</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="absolute bottom-1/4 -left-4 bg-white/5 backdrop-blur-xl border border-white/10 p-4 rounded-[1.5rem] shadow-2xl hidden lg:block">
+                        <p class="text-xs font-bold uppercase tracking-widest text-[#94a3b8] mb-2">Tech Stack</p>
+                        <div class="flex gap-2 flex-wrap max-w-[140px]">
+                            <span
+                                class="text-[10px] font-bold bg-primary/20 text-primary px-2 py-0.5 rounded-full">React</span>
+                            <span
+                                class="text-[10px] font-bold bg-primary/20 text-primary px-2 py-0.5 rounded-full">Next.js</span>
+                            <span
+                                class="text-[10px] font-bold bg-primary/20 text-primary px-2 py-0.5 rounded-full">Node.js</span>
+                            <span
+                                class="text-[10px] font-bold bg-primary/20 text-primary px-2 py-0.5 rounded-full">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="about-hero-intro w-full md:w-1/3 z-20 flex flex-col justify-center mt-auto md:mt-0 pb-24 md:pb-0 reveal reveal-right delay-500">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="w-4 h-[1px] bg-primary"></div><span
+                        class="text-sm font-semibold tracking-widest uppercase text-primary">Introduction</span>
+                </div>
+                <h2 class="text-4xl lg:text-5xl font-semibold leading-tight mb-8 text-white">Full Stack Web
+                    Developer<br />& Remote Developer,<br />Khairpur, Pakistan.</h2>
+                <p class="text-[#94a3b8] text-lg leading-relaxed mb-10 max-w-sm">Building scalable, high-performance web
+                    applications using React.js, Next.js, Node.js, and MongoDB. Open to remote opportunities worldwide.
+                </p>
+                <a class="inline-flex items-center gap-4 font-bold text-[#121414] bg-primary px-8 py-4 rounded-full hover:scale-105 transition-all shadow-xl shadow-primary/20 group"
+                    href="#about-story">
+                    <span>My Story</span><span
+                        class="material-icons transform group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </a>
+            </div>
+        </main>
+
+        <!-- Skills / Contact -->
+        <section id="about-story" class="bg-[#121414] py-32 px-margin-x relative overflow-hidden">
+            <div
+                class="absolute top-0 right-0 w-1/2 h-full bg-primary/5 -skew-x-12 transform translate-x-1/2 pointer-events-none">
+            </div>
+            <div class="container-max mx-auto relative z-10">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-20 mb-32">
+                    <div class="flex flex-col gap-10 reveal reveal-left" id="contact-section">
+                        <div>
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="w-8 h-[2px] bg-primary"></div><span
+                                    class="text-sm font-bold uppercase tracking-widest text-primary">Contact</span>
+                            </div>
+                            <h2 class="text-5xl md:text-6xl font-bold text-white leading-tight mb-8">Ready to
+                                Digitize<br />Your Business?</h2>
+                        </div>
+                        <p class="text-[#94a3b8] text-lg max-w-sm">Let's build something extraordinary together. I'm
+                            always open to discussing new projects and creative ideas.</p>
+                        <!-- Contact Details Grid -->
+                        <div class="flex flex-col gap-4">
+                            <!-- WhatsApp -->
+                            <a href="https://wa.me/923147177235?text=Hi%20Tushar!%20I%20saw%20your%20portfolio."
+                                target="_blank" rel="noopener"
+                                class="flex items-center gap-4 group w-fit text-[#94a3b8] hover:text-primary transition-colors">
+                                <span
+                                    class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-[#121414] transition-all flex-shrink-0">
+                                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+                                    </svg>
+                                </span>
+                                <span class="font-semibold text-base">+92 314 7177235</span>
+                            </a>
+                            <!-- Email -->
+                            <a href="mailto:tk990822@gmail.com"
+                                class="flex items-center gap-4 group w-fit text-[#94a3b8] hover:text-primary transition-colors">
+                                <span
+                                    class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-[#121414] transition-all flex-shrink-0">
+                                    <span class="material-icons text-[18px]">mail</span>
+                                </span>
+                                <span class="font-semibold text-base">tk990822@gmail.com</span>
+                            </a>
+                            <!-- LinkedIn -->
+                            <a href="https://www.linkedin.com/in/rk-engineers" target="_blank" rel="noopener"
+                                class="flex items-center gap-4 group w-fit text-[#94a3b8] hover:text-primary transition-colors">
+                                <span
+                                    class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-[#121414] transition-all flex-shrink-0">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                        <path fill-rule="evenodd"
+                                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </span>
+                                <span class="font-semibold text-base">linkedin.com/in/rk-engineers</span>
+                            </a>
+                            <!-- GitHub -->
+                            <a href="https://github.com/MrTusharkumar" target="_blank" rel="noopener"
+                                class="flex items-center gap-4 group w-fit text-[#94a3b8] hover:text-primary transition-colors">
+                                <span
+                                    class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-[#121414] transition-all flex-shrink-0">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                        <path fill-rule="evenodd"
+                                            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </span>
+                                <span class="font-semibold text-base">github.com/MrTusharkumar</span>
+                            </a>
+                            <!-- Portfolio -->
+                            <a href="https://mrtusharkumar.github.io/Portfolio/" target="_blank" rel="noopener"
+                                class="flex items-center gap-4 group w-fit text-[#94a3b8] hover:text-primary transition-colors">
+                                <span
+                                    class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-[#121414] transition-all flex-shrink-0">
+                                    <span class="material-icons text-[18px]">language</span>
+                                </span>
+                                <span class="font-semibold text-base">mrtusharkumar.github.io/Portfolio/</span>
+                            </a>
+                            <!-- Location -->
+                            <div class="flex items-center gap-4 text-[#94a3b8]">
+                                <span
+                                    class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
+                                    <span class="material-icons text-[18px]">location_on</span>
+                                </span>
+                                <span class="font-semibold text-base">Khairpur, Pakistan · Open to Remote
+                                    Worldwide</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-12 reveal reveal-right">
+                        <div class="max-w-lg">
+                            <h3 class="text-3xl font-semibold text-white mb-8 leading-relaxed">"Focused on writing
+                                maintainable code, solving complex problems, and creating modern digital solutions."
+                            </h3>
+                            <p class="text-[#94a3b8] text-lg mb-12">Full Stack Web Developer skilled in React.js,
+                                Next.js, Node.js, Express.js, and MongoDB. Open to remote opportunities worldwide.</p>
+                        </div>
+                        <div class="flex gap-20">
+                            <div class="flex flex-col gap-2"><span
+                                    class="text-7xl font-bold text-primary">3+</span><span
+                                    class="text-sm font-bold uppercase tracking-widest text-[#94a3b8]">Years of
+                                    Experience</span></div>
+                            <div class="flex flex-col gap-2"><span
+                                    class="text-7xl font-bold text-primary">20+</span><span
+                                    class="text-sm font-bold uppercase tracking-widest text-[#94a3b8]">Projects
+                                    Delivered</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-grid grid grid-cols-1 md:grid-cols-3 gap-8 reveal reveal-up">
+                    <div
+                        class="service-card bg-primary p-12 rounded-[1.5rem] flex flex-col gap-10 min-h-[450px] justify-between shadow-2xl shadow-primary/10 hover:-translate-y-4 transition-all">
+                        <div class="w-16 h-16 bg-[#121414] rounded-2xl flex items-center justify-center text-primary">
+                            <span class="material-symbols-outlined text-4xl">code</span>
+                        </div>
+                        <div>
+                            <h4 class="text-4xl font-bold text-[#121414] mb-4">Frontend<br />Developer.</h4>
+                            <p class="text-[#121414]/70 mb-8">React.js, Next.js, Tailwind CSS, HTML5 & CSS3.</p><span
+                                class="text-sm font-bold uppercase tracking-widest text-[#121414]/80">5 Projects
+                                Live</span>
+                        </div>
+                    </div>
+                    <div
+                        class="service-card glass p-12 rounded-[1.5rem] flex flex-col gap-10 min-h-[450px] justify-between hover:-translate-y-4 transition-all">
+                        <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center text-primary">
+                            <span class="material-symbols-outlined text-4xl">dns</span>
+                        </div>
+                        <div>
+                            <h4 class="text-4xl font-bold text-white mb-4">Backend<br />Developer.</h4>
+                            <p class="text-[#94a3b8] mb-8">Node.js, Express.js, REST APIs, JWT Authentication.</p><span
+                                class="text-sm font-bold uppercase tracking-widest text-primary">Scalable APIs</span>
+                        </div>
+                    </div>
+                    <div
+                        class="service-card glass p-12 rounded-[1.5rem] flex flex-col gap-10 min-h-[450px] justify-between hover:-translate-y-4 transition-all">
+                        <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center text-primary">
+                            <span class="material-symbols-outlined text-4xl">storage</span>
+                        </div>
+                        <div>
+                            <h4 class="text-4xl font-bold text-white mb-4">Database<br />Engineer.</h4>
+                            <p class="text-[#94a3b8] mb-8">MongoDB, MySQL — optimized for scale and reliability.</p>
+                            <span class="text-sm font-bold uppercase tracking-widest text-primary">Full Stack</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio -->
+        <section class="bg-[#121414] py-32 px-margin-x">
+            <div class="container-max mx-auto">
+                <div class="portfolio-grid grid grid-cols-1 md:grid-cols-2 gap-20 items-start">
+                    <div class="flex flex-col gap-12 pt-12 md:sticky md:top-32 reveal reveal-left">
+                        <div>
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="w-8 h-[2px] bg-primary"></div><span
+                                    class="text-sm font-bold uppercase tracking-widest text-primary">Portfolio</span>
+                            </div>
+                            <h2 class="text-5xl md:text-6xl font-bold text-white mb-8">Selected Works.</h2>
+                            <p class="text-[#94a3b8] text-lg max-w-sm mb-12">A curated selection of projects that
+                                showcase my passion for design and development.</p>
+                            <a class="inline-flex items-center gap-4 text-2xl font-bold text-primary hover:text-white transition-colors group"
+                                href="#gallery" data-view="gallery">Explore Gallery<span
+                                    class="material-symbols-outlined text-3xl transform group-hover:translate-x-2 transition-transform">arrow_forward</span></a>
+                        </div>
+                        <a href="https://MrTusharkumar.github.io/dineflex" target="_blank" rel="noopener"
+                            class="relative mt-24 group cursor-pointer overflow-hidden rounded-[1.5rem] reveal reveal-up block">
+                            <div class="aspect-[4/5] overflow-hidden bg-[#1e2020] rounded-[1.5rem]"><img alt="Dineflex"
+                                    class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-1000"
+                                    src="assets/Dineflex.jpg" /></div>
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-[#121414] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-10">
+                                <h3 class="text-3xl font-bold text-white mb-2">Dineflex.</h3>
+                                <p class="text-primary font-bold">Restaurant Website · Live ↗</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="flex flex-col gap-20">
+                        <a href="https://MrTusharkumar.github.io/pizzaflow" target="_blank" rel="noopener"
+                            class="relative group cursor-pointer overflow-hidden rounded-[1.5rem] reveal reveal-right delay-200 block">
+                            <div class="aspect-[4/5] overflow-hidden bg-[#1e2020] rounded-[1.5rem]"><img alt="PizzaFlow"
+                                    class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-1000"
+                                    src="assets/PizzaFlow.jpg" /></div>
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-[#121414] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-10">
+                                <h3 class="text-3xl font-bold text-white mb-2">PizzaFlow.</h3>
+                                <p class="text-primary font-bold">Food Ordering · Live ↗</p>
+                            </div>
+                        </a>
+                        <a href="https://MrTusharkumar.github.io/pizza-time-with-react" target="_blank" rel="noopener"
+                            class="relative group cursor-pointer overflow-hidden rounded-[1.5rem] reveal reveal-right delay-400 block">
+                            <div class="aspect-[4/5] overflow-hidden bg-[#1e2020] rounded-[1.5rem]"><img
+                                    alt="Pizza Time"
+                                    class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-1000"
+                                    src="assets/Pizza Time.jpg" /></div>
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-[#121414] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-10">
+                                <h3 class="text-3xl font-bold text-white mb-2">Pizza Time.</h3>
+                                <p class="text-primary font-bold">React App · Live ↗</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-[#121414] py-20 px-margin-x border-t border-white/5">
+            <div class="container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+                <a class="text-2xl font-black text-white tracking-tighter" href="#gallery"
+                    data-view="gallery">TUSHAR<span class="text-primary">.</span></a>
+                <div class="flex gap-8">
+                    <a class="text-[#94a3b8] hover:text-white transition-colors"
+                        href="https://www.linkedin.com/in/rk-engineers" target="_blank" rel="noopener">LinkedIn</a>
+                    <a class="text-[#94a3b8] hover:text-white transition-colors" href="https://github.com/MrTusharkumar"
+                        target="_blank">GitHub</a>
+                    <a class="text-[#94a3b8] hover:text-white transition-colors"
+                        href="mailto:tk990822@gmail.com">Email</a>
+                </div>
+                <p class="text-[#94a3b8] text-sm">© 2025 Tushar Kumar. Built with passion & precision.</p>
+            </div>
+        </footer>
+
+    </div><!-- /view-about -->
+
+    <script>
+        // ── SPA Hash Router ──────────────────────────────
+        const views = {
+            gallery: document.getElementById('view-gallery'),
+            services: document.getElementById('view-services'),
+            about: document.getElementById('view-about')
+        };
+
+        function navigate(hash) {
+            let target = 'gallery';
+            if (hash === '#about') target = 'about';
+            if (hash === '#services') target = 'services';
+
+            Object.entries(views).forEach(([k, el]) => {
+                if (el) el.classList.toggle('active', k === target);
+            });
+            window.scrollTo(0, 0);
+            // Wait for browser to paint the new view before running reveal logic
+            requestAnimationFrame(() => {
+                setTimeout(() => {
+                    initReveals();
+                    forceRevealVisible();
+                }, 80);
             });
         }
-    });
-};
 
-// Insta Link 
-document.getElementById('clickableIcon').onclick = function() {
-    window.location.href = 'https://www.instagram.com/rk_engineer_s/';
-};
-document.getElementById('clickableIcon-1').onclick = function() {
-    window.location.href = 'mailto:Mr_Tushar_Kumar@proton.me';
-};
-document.getElementById('clickableIcon-2').onclick = function() {
-    window.location.href = 'https://www.facebook.com/profile.php?id=61567836661163';
-};
-document.getElementById('clickableIcon-3').onclick = function() {
-    window.location.href = 'https://github.com/MrTusharkumar';
-};
+        window.addEventListener('hashchange', () => navigate(location.hash));
+        navigate(location.hash);
 
-	</script>
+        // Nav link click → switch view without reload
+        document.querySelectorAll('.nav-link[data-view]').forEach(a => {
+            a.addEventListener('click', e => {
+                e.preventDefault();
+                const view = a.getAttribute('data-view');
+                history.pushState(null, '', '#' + view);
+                navigate('#' + view);
+            });
+        });
+
+        // ── Gallery inner views (preview iframe) ─────────
+        const galleryView = document.getElementById('gallery-view');
+        const previewView = document.getElementById('preview-view');
+        const previewContainer = document.getElementById('preview-container');
+        const previewIframe = document.getElementById('preview-iframe');
+        const previewLoader = document.getElementById('preview-loader');
+
+        document.querySelectorAll('.template-card').forEach(card => {
+            card.addEventListener('click', () => showPreview(card.dataset.title, card.dataset.url));
+        });
+        document.getElementById('back-to-gallery').addEventListener('click', showGallery);
+
+        // ── Device Toggles & Scaling Engine ────────────────
+        const deviceWidths = { 'device-desktop': 1280, 'device-tablet': 768, 'device-mobile': 375 };
+        let activeDeviceId = 'device-desktop';
+
+        function setPreviewDevice(id) {
+            activeDeviceId = id;
+            const targetW = deviceWidths[id];
+            const mainEl = document.querySelector('#preview-view main');
+            if (!mainEl) return;
+
+            const availableW = mainEl.clientWidth - (window.innerWidth < 768 ? 32 : 64);
+            const availableH = mainEl.clientHeight - (window.innerWidth < 768 ? 32 : 64);
+
+            // Update Buttons UI
+            Object.keys(deviceWidths).forEach(btnId => {
+                const btn = document.getElementById(btnId);
+                if (btnId === id) {
+                    btn.classList.add('bg-secondary-container', 'text-on-secondary-container', 'shadow-sm');
+                    btn.classList.remove('text-on-surface-variant', 'hover:text-on-surface', 'hover:bg-surface-bright');
+                    btn.querySelector('span').style.fontVariationSettings = "'FILL' 1";
+                } else {
+                    btn.classList.remove('bg-secondary-container', 'text-on-secondary-container', 'shadow-sm');
+                    btn.classList.add('text-on-surface-variant', 'hover:text-on-surface', 'hover:bg-surface-bright');
+                    btn.querySelector('span').style.fontVariationSettings = "'FILL' 0";
+                }
+            });
+
+            // Apply Scaling
+            if (targetW > availableW) {
+                const scale = availableW / targetW;
+                previewIframe.width = targetW; // Force internal viewport
+                previewContainer.style.width = targetW + 'px';
+                previewContainer.style.minWidth = targetW + 'px';
+                previewContainer.style.maxWidth = 'none';
+                // Scale the height so it visually fills the available space
+                previewContainer.style.height = (availableH / scale) + 'px';
+                previewContainer.style.transform = `scale(${scale})`;
+                previewContainer.style.transformOrigin = 'center center';
+            } else {
+                previewIframe.width = "100%";
+                previewContainer.style.transform = 'none';
+                previewContainer.style.width = '100%';
+                previewContainer.style.minWidth = '0';
+                previewContainer.style.maxWidth = targetW + 'px';
+                previewContainer.style.height = '100%';
+            }
+        }
+
+        function showPreview(title, url) {
+            galleryView.classList.add('hidden');
+            previewView.classList.remove('hidden');
+            previewLoader.style.display = 'flex';
+            previewIframe.src = url;
+            previewIframe.onload = () => { previewLoader.style.display = 'none'; };
+            window.scrollTo(0, 0);
+
+            // Auto-detect default device
+            let defaultId = 'device-desktop';
+            if (window.innerWidth < 768) defaultId = 'device-mobile';
+            else if (window.innerWidth < 1200) defaultId = 'device-tablet';
+
+            // Wait a tiny bit for the view to become visible so dimensions are accurate
+            setTimeout(() => setPreviewDevice(defaultId), 10);
+        }
+
+        function showGallery() {
+            previewView.classList.add('hidden');
+            galleryView.classList.remove('hidden');
+            previewIframe.src = 'about:blank';
+            window.scrollTo(0, 0);
+        }
+
+        document.getElementById('back-to-gallery').addEventListener('click', showGallery);
+
+        Object.keys(deviceWidths).forEach(id => {
+            document.getElementById(id).addEventListener('click', () => setPreviewDevice(id));
+        });
+
+        window.addEventListener('resize', () => {
+            if (!previewView.classList.contains('hidden')) {
+                setPreviewDevice(activeDeviceId);
+            }
+        });
+
+        // ── Scroll Reveal ─────────────────────────────────
+        let revealObserver;
+        function initReveals() {
+            if (revealObserver) revealObserver.disconnect();
+            revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(e => {
+                    if (e.isIntersecting) {
+                        e.target.classList.add('active');
+                        revealObserver.unobserve(e.target); // fire once
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+
+            document.querySelectorAll('.reveal').forEach(el => {
+                // Reset only elements that haven't animated yet
+                if (!el.classList.contains('active')) {
+                    revealObserver.observe(el);
+                }
+            });
+        }
+
+        // Force-reveal anything already in the viewport (hero elements etc.)
+        function forceRevealVisible() {
+            const vH = window.innerHeight;
+            document.querySelectorAll('.reveal').forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < vH && rect.bottom > 0) {
+                    el.classList.add('active');
+                }
+            });
+        }
+
+        // Initial run
+        requestAnimationFrame(() => {
+            setTimeout(() => {
+                initReveals();
+                forceRevealVisible();
+            }, 100);
+        });
+
+        // ── Gallery Filtering Logic ─────────────────────
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const templateCards = document.querySelectorAll('.template-card');
+
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const filter = btn.dataset.filter;
+
+                // Update active button state
+                filterButtons.forEach(b => {
+                    b.classList.remove('bg-primary', 'text-[#121414]', 'font-bold', 'shadow-lg', 'shadow-primary/20', 'active');
+                    b.classList.add('bg-white/5', 'text-on-surface-variant', 'border-white/10', 'font-label-md');
+                });
+                btn.classList.add('bg-primary', 'text-[#121414]', 'font-bold', 'shadow-lg', 'shadow-primary/20', 'active');
+                btn.classList.remove('bg-white/5', 'text-on-surface-variant', 'border-white/10', 'font-label-md');
+
+                // Filter cards with animation
+                templateCards.forEach(card => {
+                    const category = card.dataset.category;
+                    if (filter === 'all' || category === filter) {
+                        card.classList.remove('filtered-out');
+                        setTimeout(() => {
+                            card.style.display = 'block';
+                            // Re-trigger reveal animation if needed
+                            card.classList.add('active');
+                        }, 10);
+                    } else {
+                        card.classList.add('filtered-out');
+                        setTimeout(() => {
+                            card.style.display = 'none';
+                        }, 500); // match transition duration
+                    }
+                });
+            });
+        });
+    </script>
+
+    <!-- ── Android Bottom Navigation Bar ─────────────── -->
+    <nav id="bottom-nav" role="navigation" aria-label="Main navigation">
+        <div class="bottom-nav-inner">
+            <button class="bnav-item active-tab" id="bnav-gallery" data-view="gallery" aria-label="Gallery">
+                <span class="material-icons bnav-icon">grid_view</span>
+                <span class="bnav-label">Gallery</span>
+            </button>
+            <button class="bnav-item" id="bnav-services" data-view="services" aria-label="Services">
+                <span class="material-icons bnav-icon">design_services</span>
+                <span class="bnav-label">Services</span>
+            </button>
+            <button class="bnav-item" id="bnav-about" data-view="about" aria-label="About">
+                <span class="material-icons bnav-icon">person</span>
+                <span class="bnav-label">About</span>
+            </button>
+            <button class="bnav-item" id="bnav-hire" data-view="about" data-scroll="contact-section"
+                aria-label="Hire Me">
+                <span class="material-icons bnav-icon">mail</span>
+                <span class="bnav-label">Hire Me</span>
+            </button>
+        </div>
+    </nav>
+
+    <script>
+        // ── Android Bottom Nav Logic ───────────────────
+        const bnavItems = document.querySelectorAll('#bottom-nav .bnav-item[data-view]');
+
+        // Ripple effect on touch
+        document.querySelectorAll('.bnav-item').forEach(btn => {
+            btn.addEventListener('pointerdown', function (e) {
+                const ripple = document.createElement('span');
+                ripple.classList.add('ripple');
+                const rect = this.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height) * 1.5;
+                ripple.style.cssText = `width:${size}px;height:${size}px;left:${e.clientX - rect.left - size / 2}px;top:${e.clientY - rect.top - size / 2}px;`;
+                this.appendChild(ripple);
+                ripple.addEventListener('animationend', () => ripple.remove());
+            });
+        });
+
+        // Sync bottom nav active state with SPA views
+        function syncBottomNav(viewName) {
+            bnavItems.forEach(b => {
+                b.classList.toggle('active-tab', b.dataset.view === viewName);
+            });
+        }
+
+        // Hook into the existing navigate function
+        const _origNavigate = navigate;
+        window.navigateSPA = function (hash) {
+            _origNavigate(hash);
+            syncBottomNav(hash === '#about' ? 'about' : (hash === '#services' ? 'services' : 'gallery'));
+        };
+
+        // Bottom nav click
+        bnavItems.forEach(btn => {
+            btn.addEventListener('click', e => {
+                e.preventDefault();
+                const view = btn.dataset.view;
+                const scrollTarget = btn.dataset.scroll;
+
+                history.pushState(null, '', '#' + view);
+                navigate('#' + view);
+                syncBottomNav(view);
+
+                if (scrollTarget) {
+                    // Wait for view transition
+                    setTimeout(() => {
+                        const el = document.getElementById(scrollTarget);
+                        if (el) {
+                            el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    }, 350);
+                }
+            });
+        });
+
+        // Sync on hash change
+        window.addEventListener('hashchange', () => {
+            syncBottomNav(location.hash === '#about' ? 'about' : (location.hash === '#services' ? 'services' : 'gallery'));
+        });
+
+        // Initial sync
+        syncBottomNav(location.hash === '#about' ? 'about' : (location.hash === '#services' ? 'services' : 'gallery'));
+
+        // Also add ripple to gallery nav links
+        document.querySelectorAll('.nav-link[data-view]').forEach(a => {
+            a.addEventListener('click', () => {
+                syncBottomNav(a.dataset.view);
+            });
+        });
+    </script>
+
+    <!-- ── Floating WhatsApp Button ──────────────────── -->
+    <a href="https://wa.me/923147177235?text=Hi%20Tushar!%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect."
+        target="_blank" rel="noopener"
+        class="fixed bottom-[100px] right-6 md:bottom-10 md:right-10 z-[9999] bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-[0_10px_20px_rgba(37,211,102,0.3)] hover:shadow-[0_15px_25px_rgba(37,211,102,0.4)] hover:scale-110 active:scale-95 transition-all duration-300 group"
+        aria-label="Chat on WhatsApp">
+        <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+        </svg>
+        <!-- Tooltip -->
+        <span
+            class="absolute -top-12 right-0 bg-[#121414] text-white text-xs font-bold px-3 py-2 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+            Chat with me
+        </span>
+    </a>
 
 </body>
+
 </html>
